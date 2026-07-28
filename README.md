@@ -14,7 +14,7 @@ NextStop is a web application that helps users discover places in Montreal and o
 ## Documentation
 - Project Planning (`planning/ProjectPlanning.md`)
 - Trello Board: https://trello.com/b/U9FnhejE/nextstop-web-project-1
-- Journal *(coming soon)*
+- Journal (`journal/`)
 
 ## Status
 This project is currently under development.
