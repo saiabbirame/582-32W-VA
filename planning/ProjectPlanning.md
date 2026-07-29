@@ -94,3 +94,6 @@ To keep the project achievable within the five-week timeline, advanced features 
 - Add ratings or reviews.
 - Support additional cities.
 
+---
+## Frontend Track
+Track A - Flask and JavaScript
