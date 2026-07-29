@@ -97,3 +97,45 @@ To keep the project achievable within the five-week timeline, advanced features 
 ---
 ## Frontend Track
 Track A - Flask and JavaScript
+
+---
+## Route or Endpoint List
+
+| Method | Route | Purpose|
+|--------|-------|--------|
+| GET | `/` | Display the home page. |
+| GET | `/places` | Display all available places. |
+| GET | `/places/<int:id>` | Display information about a selected place. |
+| GET | `/itineraries` | Display the user's itineraries. |
+| GET | `/account` | Display the user's account information. |
+
+### User Authentication
+| Method | Route | Purpose|
+|--------|-------|--------|
+| GET | `/register` | Display the registration page. |
+| POST | `/register` | Register a new user. |
+| GET | `/login` | Display the login page. |
+| POST | `/login` | Log in a user. |
+| POST | `/logout` | Log out the current user. |
+
+### Itinerary Management
+| Method | Route | Purpose|
+|--------|-------|--------|
+| GET | `/itineraries/new` | Display the create itinerary page. |
+| POST | `/itineraries` | Create a new itinerary. |
+| GET | `/itineraries/<int:id>` | Display a selected itinerary. |
+| GET | `/itineraries/<int:id>/edit` | Display the edit itinerary page. |
+| POST | `/itineraries/<int:id>/edit` | Update an existing itinerary. |
+| POST | `/itineraries/<int:id>/places` | Add a place to an itinerary. |
+| POST | `/itineraries/<int:id>/places/<int:place_id>/delete` | Remove a place from an itinerary. |
+| POST | `/itineraries/<int:id>/delete` | Delete an itinerary. |
+
+### Place Management
+| Method | Route | Purpose|
+|--------|-------|--------|
+| GET | `/admin/places` | Display all places for administration. |
+| GET | `/admin/places/new` | Display the add place page. |
+| POST | `/admin/places` | Add a new place. |
+| GET | `/admin/places/<int:id>/edit` | Display the edit place page. |
+| POST | `/admin/places/<int:id>/edit` | Update an existing place. |
+| POST | `/admin/places/<int:id>/delete` | Delete a place. |
