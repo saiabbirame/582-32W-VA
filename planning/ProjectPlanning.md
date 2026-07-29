@@ -9,7 +9,7 @@ NextStop is a web application that helps users discover places in Montreal and o
 
 ---
 ## Project Vision Statement
-For tourists, new residents and local residents exploring Montreal, this website helps them plan personalized day trips by allowing them to discover places and organize them into personalized itineraries.
+To provide a simple and user-friendly platform that makes planning a day in Montreal easier by combining place discovery and itinerary planning in one applicaiton.
 
 ---
 ## Simulated Client Quote
