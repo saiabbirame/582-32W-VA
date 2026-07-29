@@ -52,11 +52,9 @@ An administrator can add, edit and delete the places available in the applicatio
 
 ---
 ## Project Scope
-This project focuses on helping users discover places in Montreal and organize them into personalized daily itineraries.
-
 The application will allow users to browse places, filter them by category and create, edit and manage their own itineraries after logging in. An administrator will manage the list of places available in the application.
 
-To keep the project achievable within the five-week timeline, advanced features like maps, reviews, ratings, itinerary sharing and support for multiple cities will not be included in the initial version.
+To keep the project achievable within the five-week timeline, advanced features such as maps, reviews, ratings, itinerary sharing and support for multiple cities will not be included in the initial version.
 
 ---
 ## Must-Have Features
