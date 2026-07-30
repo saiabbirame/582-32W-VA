@@ -140,6 +140,4 @@ Track A - Flask and JavaScript
 | POST | `/admin/places/<int:id>/edit` | Update an existing place. |
 | POST | `/admin/places/<int:id>/delete` | Delete a place. |
 
----
-## Project Structure
-The project will include a `code/` folder in the root directory to store the Flask application and all source code. I expect this folder to contain an `app.py` file, the standard Flask `templates/` and `static/` folders, and a `routes/`folder to organize the application's routes.
+
