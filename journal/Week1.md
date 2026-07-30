@@ -13,3 +13,8 @@ Today, I continued working on the planning phase of my project. I finished creat
 While organizing my files, I noticed that I had exported one of the diagrams with the wrong filename. After checking my Git status, I figured out what the issue was, deleted the incorrectly named file and committed the fix to keep the repository clean. Once I finished the planning work, I started thinking about the application's visual design. I looked through several color palettes using Figma's palette generator before choosing one that I felt matched the overall theme. I also created a new `design` folder in my repository so I could keep the design work separate from the planning documents.
 
 My goal for today was to complete the planning tasks I was working on and make a start on the application's visual design. By the end of the session, I had completed the database diagrams, updated my Trello board with the user stories and completed tasks, selected a color palette and organized my project files for the next stage.
+
+## Wednesday
+Today, I continued working on the planning phase of my application project. I made revisions to the project vision statement and updated the project scope. I also finalized the frontend development track that I will be following and planned the application's routes and endpoints. 
+
+After completing the planning tasks, I moved on to Figma to begin designing the application's interface. I created a simple design system by selecting the project's color palette and choosing Poppins as the main font. Finally, I created a rough draft of the homepage.
