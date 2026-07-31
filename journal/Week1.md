@@ -18,3 +18,8 @@ My goal for today was to complete the planning tasks I was working on and make a
 Today, I continued working on the planning phase of my application project. I made revisions to the project vision statement and updated the project scope. I also finalized the frontend development track that I will be following and planned the application's routes and endpoints. 
 
 After completing the planning tasks, I moved on to Figma to begin designing the application's interface. I created a simple design system by selecting the project's color palette and choosing Poppins as the main font. Finally, I created a rough draft of the homepage.
+
+## Thursday
+Today, I presented Deliverable 1 for my NextStop project during class. I took notes on the teacher's comments and suggestions so I can improve the project as I move into the development phase. The feedback helped clarify a few expectations and gave me a better understanding of how to structure the project for the upcoming deliverables.
+
+After class, I continued focusing on the planning phase by working on the remaining wireframes in Figma. I ensured the layouts were consistent with my design system, reused interface components where possible and maintaining a clear visual hierarchy across the different screens. 
