@@ -122,3 +122,39 @@ class Itinerary(db.Model):
         db.ForeignKey("user.id"),
         nullable=False
     )
+
+class ItineraryPlace(db.Model):
+    __tablename__ = "itinerary_place"
+
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+
+    itinerary_id = db.Column(
+        db.Integer,
+        db.ForeignKey("itinerary.id"),
+        nullable=False
+    )
+
+    place_id = db.Column(
+        db.Integer,
+        db.ForeignKey("place.id"),
+        nullable=False
+    )
+
+    visit_time = db.Column(
+        db.Time,
+        nullable=False
+    )
+
+    notes = db.Column(
+        db.String(500),
+        nullable=True
+    )
+
+    def __repr__(self):
+        return (
+            f"<ItineraryPlace {self.id}: "
+            f"itinerary {self.itinerary_id}, place {self.place_id}>"
+        )
