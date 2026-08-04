@@ -33,6 +33,11 @@ class User(UserMixin, db.Model):
         nullable=False
     )
 
+    itineraries = db.relationship(
+        "Itinerary",
+        back_populates="user"
+    )
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -96,6 +101,11 @@ class Place(db.Model):
         nullable=False
     )
 
+    itinerary_places = db.relationship(
+        "ItineraryPlace",
+        back_populates="place"
+    )
+
     def __repr__(self):
         return f"<Place {self.id}: {self.name}>"
     
@@ -122,6 +132,19 @@ class Itinerary(db.Model):
         db.ForeignKey("user.id"),
         nullable=False
     )
+
+    user = db.relationship(
+        "User",
+        back_populates="itineraries"
+    )
+
+    itinerary_places = db.relationship(
+        "ItineraryPlace",
+        back_populates="itinerary"
+    )
+
+    def __repr__(self):
+        return f"<Itinerary {self.id}: {self.title}>"
 
 class ItineraryPlace(db.Model):
     __tablename__ = "itinerary_place"
@@ -151,6 +174,16 @@ class ItineraryPlace(db.Model):
     notes = db.Column(
         db.String(500),
         nullable=True
+    )
+
+    itinerary = db.relationship(
+        "Itinerary",
+        back_populates="itinerary_places"
+    )
+
+    place = db.relationship(
+        "Place",
+        back_populates="itinerary_places"
     )
 
     def __repr__(self):
