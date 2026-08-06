@@ -219,7 +219,7 @@ def itineraries():
 
 @app.route("/")
 def index():
-    return "<h1>Welcome to NextStop</h1>"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
