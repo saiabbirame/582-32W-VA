@@ -1,7 +1,14 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask
+from flask import (
+    Flask,
+    flash,
+    redirect,
+    render_template,
+    request,
+    url_for
+)
 from flask_login import LoginManager
 
 from models import db, User, Place, Itinerary, ItineraryPlace
@@ -41,6 +48,10 @@ def validate_password(password):
         return("Password must contain one digit.")
     
     return None
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
 
 @app.route("/")
 def index():
