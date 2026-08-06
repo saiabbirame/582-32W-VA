@@ -9,7 +9,12 @@ from flask import (
     request,
     url_for
 )
-from flask_login import LoginManager, login_user
+from flask_login import (
+    LoginManager, 
+    login_user, 
+    logout_user, 
+    login_required
+)
 
 from models import db, User, Place, Itinerary, ItineraryPlace
 
@@ -138,6 +143,15 @@ def login():
         return redirect(url_for("index"))
 
     return render_template("login.html")
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+
+    flash("You have been logged out.", "success")
+
+    return redirect(url_for("index"))
 
 @app.route("/")
 def index():
