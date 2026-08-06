@@ -115,6 +115,10 @@ def register():
 
     return render_template("register.html")
 
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
 @app.route("/")
 def index():
     return "<h1>Welcome to NextStop</h1>"
