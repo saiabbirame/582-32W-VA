@@ -9,7 +9,7 @@ from flask import (
     request,
     url_for
 )
-from flask_login import LoginManager
+from flask_login import LoginManager, login_user
 
 from models import db, User, Place, Itinerary, ItineraryPlace
 
@@ -121,10 +121,21 @@ def login():
         email = request.form["email"].strip().lower()
         password = request.form["password"]
 
-        return render_template(
-            "login.html",
-            email=email
-        )
+        user = User.query.filter_by(email=email).first()
+
+        if user is None or not user.check_password(password):
+            flash("Invalid email or password.", "error")
+
+            return render_template(
+                "login.html",
+                email=email
+            )
+        
+        login_user(user)
+
+        flash("You are now logged in.", "success")
+
+        return render_template("login.html")
 
     return render_template("login.html")
 
