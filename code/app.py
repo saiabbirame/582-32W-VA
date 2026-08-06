@@ -128,6 +128,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for("itineraries"))
+    
     if request.method == "POST":
         email = request.form["email"].strip().lower()
         password = request.form["password"]
