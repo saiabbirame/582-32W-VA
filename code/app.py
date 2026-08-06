@@ -195,7 +195,7 @@ def create_itinerary():
 
         flash("Your itinerary has been created.", "success")
 
-        return redirect(url_for("create_itinerary"))
+        return redirect(url_for("itineraries"))
 
     return render_template("create_itinerary.html")
 
