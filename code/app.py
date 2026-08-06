@@ -199,6 +199,18 @@ def create_itinerary():
 
     return render_template("create_itinerary.html")
 
+@app.route("/itineraries")
+@login_required
+def itineraries():
+    user_itineraries = Itinerary.query.filter_by(
+        user_id=current_user.id
+    ).order_by(Itinerary.date).all()
+
+    return render_template(
+        "itineraries.html",
+        itineraries=user_itineraries
+    )
+
 @app.route("/")
 def index():
     return "<h1>Welcome to NextStop</h1>"
