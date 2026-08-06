@@ -15,3 +15,10 @@ After updating the project planning, I started working on the authentication fea
 My next goal is to complete the authentication system by implementing user registration, login and logout. Once authenticaiton is working, I will start building the first vertical slice by allowing authenticated users to create and view their own itineraries.
 
 Nothing is blocking me at the moment. My main focus is making sure I continue building the project gradually with meaningful Git commits and regular testing after each completed task.
+
+## Wednesday
+Today I finished most of the backend foundation for Deliverable 2. I completed the authentication system by implementing registration, login and logout using Flask-login. I also created the itinerary creation and itinerary list pages, added server-side validation and connected them to the SQLite database so users can create and view their own itineraries. I tested the main workflows and reviewed the project files to fix a small bug with the flash message category.
+
+Next, I'll finish testing all the application workflows, create the data flow/architecture diagrams and prepare my presentation so I can clearly explain how data moves through the application, where validation happens.
+
+Nothing is blocking me at the moment. The application is working as expected, so my main focus is testing everything thoroughly and preparing for the presentation.
