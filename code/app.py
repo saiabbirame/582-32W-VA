@@ -49,8 +49,11 @@ def validate_password(password):
     
     return None
 
-@app.route("/register")
+@app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        pass
+
     return render_template("register.html")
 
 @app.route("/")
