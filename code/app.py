@@ -157,7 +157,14 @@ def logout():
 @login_required
 def create_itinerary():
     if request.method == "POST":
-        pass
+        title = request.form["title"].strip()
+        date = request.form["date"]
+
+        return render_template(
+            "create_itinerary.html",
+            title=title,
+            date=date
+        )
 
     return render_template("create_itinerary.html")
 
