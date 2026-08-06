@@ -52,7 +52,17 @@ def validate_password(password):
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        pass
+        first_name = request.form["first_name"].strip()
+        last_name = request.form["last_name"].strip()
+        email = request.form["email"].strip().lower()
+        password = request.form["password"]
+
+        return render_template(
+            "register.html",
+            first_name=first_name,
+            last_name=last_name,
+            email=email
+            )
 
     return render_template("register.html")
 
