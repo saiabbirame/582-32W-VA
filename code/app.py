@@ -27,6 +27,21 @@ with app.app_context():
 def load_user(user_id):
     return db.session.get(User, int(user_id))
 
+def validate_password(password):
+    if len(password) < 8:
+        return "Password must contain at least 8 characters."
+    
+    if len(password) > 20:
+        return "Password must contain at most 20 characters."
+    
+    if not any(character.isupper() for character in password):
+        return("Password must contain at least one uppercase letter.")
+    
+    if not any(character.isdigit() for character in password):
+        return("Password must contain one digit.")
+    
+    return None
+
 @app.route("/")
 def index():
     return "<h1>Welcome to NextStop</h1>"
