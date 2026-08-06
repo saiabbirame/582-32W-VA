@@ -135,7 +135,7 @@ def login():
 
         flash("You are now logged in.", "success")
 
-        return render_template("login.html")
+        return redirect(url_for("index"))
 
     return render_template("login.html")
 
