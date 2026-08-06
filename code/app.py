@@ -160,6 +160,27 @@ def create_itinerary():
         title = request.form["title"].strip()
         date = request.form["date"]
 
+        errors = []
+
+        if not title:
+            errors.append("Itinerary title is required.")
+
+        if len(title) > 100:
+            errors.append("Itinerary title may contain at most 100 characters.")
+
+        if not date:
+            errors.append("Itinerary date is required.")
+
+        if errors:
+            for error in errors:
+                flash(error, "error")
+
+            return render_template(
+                "create_itinerary.html",
+                title=title,
+                date=date
+            )
+
         return render_template(
             "create_itinerary.html",
             title=title,
