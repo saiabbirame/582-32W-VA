@@ -153,6 +153,11 @@ def logout():
 
     return redirect(url_for("index"))
 
+@app.route("/itineraries/create")
+@login_required
+def create_itinerary():
+    return render_template("create_itinerary.html")
+
 @app.route("/")
 def index():
     return "<h1>Welcome to NextStop</h1>"
