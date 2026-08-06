@@ -153,9 +153,12 @@ def logout():
 
     return redirect(url_for("index"))
 
-@app.route("/itineraries/create")
+@app.route("/itineraries/create", methods=["GET", "POST"])
 @login_required
 def create_itinerary():
+    if request.method == "POST":
+        pass
+
     return render_template("create_itinerary.html")
 
 @app.route("/")
