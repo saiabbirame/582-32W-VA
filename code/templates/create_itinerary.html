@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}New Itinerary | NextStop{% endblock %}
+
+{% block content %}
+<h1>Create an itinerary</h1>
+
+<form method="post">
+    <div>
+        <label for="title">Title</label>
+
+        <input
+            id="title"
+            name="title"
+            type="text"
+            maxlength="100"
+            value="{{ title or '' }}"
+            required
+        />
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+
+        <input
+            id="date"
+            name="date"
+            type="date"
+            value="{{ date or '' }}"
+            required
+        />
+    </div>
+
+    <button type="submit">Create itinerary</button>
+</form>
+{% endblock %}
