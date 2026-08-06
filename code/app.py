@@ -59,6 +59,9 @@ def validate_password(password):
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for("itineraries"))
+
     if request.method == "POST":
         first_name = request.form["first_name"].strip()
         last_name = request.form["last_name"].strip()
