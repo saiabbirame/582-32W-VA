@@ -118,7 +118,13 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        pass
+        email = request.form["email"].strip().lower()
+        password = request.form["password"]
+
+        return render_template(
+            "login.html",
+            email=email
+        )
 
     return render_template("login.html")
 
