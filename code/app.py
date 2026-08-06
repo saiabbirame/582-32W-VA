@@ -13,8 +13,11 @@ from flask_login import (
     LoginManager, 
     login_user, 
     logout_user, 
-    login_required
+    login_required,
+    current_user
 )
+
+from datetime import date
 
 from models import db, User, Place, Itinerary, ItineraryPlace
 
@@ -158,7 +161,7 @@ def logout():
 def create_itinerary():
     if request.method == "POST":
         title = request.form["title"].strip()
-        date = request.form["date"]
+        date_value = request.form["date"]
 
         errors = []
 
@@ -168,7 +171,7 @@ def create_itinerary():
         if len(title) > 100:
             errors.append("Itinerary title may contain at most 100 characters.")
 
-        if not date:
+        if not date_value:
             errors.append("Itinerary date is required.")
 
         if errors:
@@ -178,14 +181,21 @@ def create_itinerary():
             return render_template(
                 "create_itinerary.html",
                 title=title,
-                date=date
+                date=date_value
             )
 
-        return render_template(
-            "create_itinerary.html",
+        itinerary = Itinerary(
             title=title,
-            date=date
+            date=date.fromisoformat(date_value),
+            user_id=current_user.id
         )
+
+        db.session.add(itinerary)
+        db.session.commit()
+
+        flash("Your itinerary has been created.", "success")
+
+        return redirect(url_for("create_itinerary"))
 
     return render_template("create_itinerary.html")
 
