@@ -120,9 +120,9 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        flash("Your account has been created.", "success")
+        flash("Your account has been created. Please log in.", "success")
 
-        return render_template("register.html")
+        return redirect(url_for("login"))
 
     return render_template("register.html")
 
