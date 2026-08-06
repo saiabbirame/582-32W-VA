@@ -42,10 +42,10 @@ def validate_password(password):
         return "Password must contain at most 20 characters."
     
     if not any(character.isupper() for character in password):
-        return("Password must contain at least one uppercase letter.")
+        return "Password must contain at least one uppercase letter."
     
     if not any(character.isdigit() for character in password):
-        return("Password must contain one digit.")
+        return "Password must contain one digit."
     
     return None
 
@@ -98,12 +98,20 @@ def register():
                 email=email
             )
         
-        return render_template(
-                "register.html",
-                first_name=first_name,
-                last_name=last_name,
-                email=email
-            )
+        user = User(
+            first_name=first_name,
+            last_name=last_name,
+            email=email
+        )
+
+        user.set_password(password)
+
+        db.session.add(user)
+        db.session.commit()
+
+        flash("Your account has been created.", "success")
+
+        return render_template("register.html")
 
     return render_template("register.html")
 
