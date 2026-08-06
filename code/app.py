@@ -57,11 +57,52 @@ def register():
         email = request.form["email"].strip().lower()
         password = request.form["password"]
 
+        errors = []
+
+        if not first_name:
+            errors.append("First name is required.")
+
+        if len(first_name) > 50:
+            errors.append("First name may contain at most 50 characters.")
+
+        if not last_name:
+            errors.append("Last name is required.")
+
+        if len(last_name) > 50:
+            errors.append("Last name may contain at most 50 characters.")
+
+        if not email:
+            errors.append("Email is required.")
+
+        if len(email) > 255:
+            errors.append("Email may contain at most 255 characters.")
+
+        existing_user = User.query.filter_by(email=email).first()
+
+        if existing_user:
+            errors.append("That email is already registered.")
+
+        password_error = validate_password(password)
+
+        if password_error:
+            errors.append(password_error)
+
+        if errors:
+            for error in errors:
+                flash(error, "errors")
+
+            return render_template(
+                "register.html",
+                first_name=first_name,
+                last_name=last_name,
+                email=email
+            )
+        
         return render_template(
-            "register.html",
-            first_name=first_name,
-            last_name=last_name,
-            email=email
+                "register.html",
+                first_name=first_name,
+                last_name=last_name,
+                email=email
             )
 
     return render_template("register.html")
