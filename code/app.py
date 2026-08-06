@@ -100,7 +100,7 @@ def register():
 
         if errors:
             for error in errors:
-                flash(error, "errors")
+                flash(error, "error")
 
             return render_template(
                 "register.html",
