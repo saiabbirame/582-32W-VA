@@ -22,3 +22,10 @@ Today I finished most of the backend foundation for Deliverable 2. I completed t
 Next, I'll finish testing all the application workflows, create the data flow/architecture diagrams and prepare my presentation so I can clearly explain how data moves through the application, where validation happens.
 
 Nothing is blocking me at the moment. The application is working as expected, so my main focus is testing everything thoroughly and preparing for the presentation.
+
+## Thursday
+Today I started preparing for Week 3 by going through the teacher's task plan and checking what we'll be working on next. I looked through the Deliverable 3 to get a better idea of what features I'll need to implement and what I should prepare for the upcoming week.
+
+Next, I'll start preapring for the Week 3 tasks and break down the Deliverable 3 requirements into smaller tasks that I can add to my Trello board.
+
+Nothing is blocking me at the moment. I'm simply reviewing what's coming next and making sure I'm prepared before starting the next phase.
