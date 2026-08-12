@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    height: 88px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
