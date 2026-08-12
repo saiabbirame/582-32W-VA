@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .navbar{
@@ -8,6 +9,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #1B1938;
+}
+
+.nav-logo{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .nav-links{
@@ -16,8 +25,21 @@ body{
     gap: 40px;
 }
 
+.nav-links a{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 .nav-buttons{
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+.nav-buttons a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
 }
