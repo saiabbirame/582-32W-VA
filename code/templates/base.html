@@ -30,8 +30,8 @@
                         <button type="submit">Log out</button>
                     </form>
                 {% else %}
-                    <a href="{{ url_for('login') }}">Log in</a>
-                    <a href="{{ url_for('register') }}">Sign up</a>
+                    <a class="login-button" href="{{ url_for('login') }}">Log in</a>
+                    <a class="signup-button" href="{{ url_for('register') }}">Sign up</a>
                 {% endif %}
             </div>
         </nav>
