@@ -32,6 +32,14 @@ body{
     text-decoration: none;
 }
 
+.nav-links a:hover{
+    color: #9AB7AE;
+}
+
+.nav-links a.active{
+    box-shadow: 0 2px #9AB7AE;
+}
+
 .nav-buttons{
     display: flex;
     align-items: center;
@@ -51,9 +59,25 @@ body{
     color: #F8FAFC;
 }
 
+.login-button:hover{
+    background-color: #F8FAFC;
+    color: #1B1938;
+}
+
 .signup-button{
     border-radius: 8px;
     padding: 10px 18px;
     background-color: #9AB7AE;
     color: #F8FAFC;
+}
+
+.signup-button:hover{
+    background-color: #F8FAFC;
+    color: #1B1938;
+}
+
+.nav-links a,
+.login-button,
+.signup-button{
+    transition: 0.3s ease;
 }

@@ -16,7 +16,7 @@
             <a class="nav-logo" href="{{ url_for('index') }}">NextStop</a>
 
             <div class="nav-links">
-                <a href="{{ url_for('index') }}">Home</a>
+                <a class="{{ 'active' if request.endpoint == 'index' }}" href="{{ url_for('index') }}">Home</a>
                 <a href="">Places</a>
 
                 {% if current_user.is_authenticated %}
