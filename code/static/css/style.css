@@ -3,6 +3,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+/* NAVIGATION */
 .navbar{
     height: 88px;
     padding: 0 48px;
@@ -106,6 +107,88 @@ body{
     transition: 0.3s ease;
 }
 
+/* HOMEPAGE */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    gap: 48px;
+}
+
+.hero-text{
+    width: 50%;
+}
+
+.hero-text h1{
+    margin: 0 0 24px;
+    color: #1B1938;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-text h1 span{
+    color: #9AB7AE;
+}
+
+.hero-text p{
+    margin: 0 0 30px;
+    color: #1B1938;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-buttons a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.primary-button{
+    border-radius: 8px;
+    padding: 10px 18px;
+    background-color: #39588E;
+    color: #F8FAFC;
+}
+
+.primary-button:hover{
+    background-color: #1B1938;
+}
+
+.secondary-button{
+    border: 1px solid #39588E;
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: #39588E;
+}
+
+.secondary-button:hover{
+    background-color: #1B1938;
+    border: 1px solid #1B1938;
+    color: #F8FAFC;
+}
+
+.hero-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img{
+    width: 120%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px){
     .navbar{
         height: auto;
