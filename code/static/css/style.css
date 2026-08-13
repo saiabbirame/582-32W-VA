@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: "Poppins", sans-serif;
+    background-color: #F8FAFC;
 }
 
 /* NAVIGATION */
@@ -190,6 +191,8 @@ body{
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px){
+
+    /* NAVIGATION */
     .navbar{
         height: auto;
         min-height: 88px;
@@ -224,5 +227,26 @@ body{
     .nav-buttons{
         flex-direction: column;
         gap: 12px;
+    }
+
+    /* HOMEPAGE - HERO SECTION */
+    .hero{
+        padding: 48px 24px;
+        flex-direction: column-reverse;
+        gap: 4px;
+    }
+
+    .hero-text{
+        width: 100%;
+    }
+
+    .hero-image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img{
+        width: 90%;
     }
 }
