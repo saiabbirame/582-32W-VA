@@ -3,7 +3,26 @@
 {% block title %}Home | NextStop{% endblock %}
 
 {% block content %}
-<h1>Welcome to NextStop</h1>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Discover Montreal.
+            <br>
+            <span>Plan your next stop.</span>
+        </h1>
 
-<p>Plan your next adventure around Montreal.</p>
+        <p>Discover cafés, attractions, parks and hidden gems. Build personalized itineraries and explore Montreal with confidence.</p>
+
+        <div class="hero-buttons">
+            <a href="" class="primary-button">Browse Places</a>
+
+            {% if not current_user.is_authenticated %}
+                <a href="{{ url_for('register') }}" class="secondary-button">Sign Up Free</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/hero.png')}}" alt="Montreal illustration">
+    </div>
+</section>
 {% endblock %}
