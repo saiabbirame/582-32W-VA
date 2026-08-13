@@ -19,6 +19,21 @@ body{
     text-decoration: none;
 }
 
+.nav-toggle{
+    display: none;
+    background: none;
+    border: none;
+    color: #F8FAFC;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
 .nav-links{
     display: flex;
     align-items: center;
@@ -80,4 +95,14 @@ body{
 .login-button,
 .signup-button{
     transition: 0.3s ease;
+}
+
+@media (max-width: 768px){
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+    }
 }
