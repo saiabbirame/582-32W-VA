@@ -24,6 +24,10 @@ body{
     text-decoration: none;
 }
 
+.nav-logo span{
+    color: #9AB7AE;
+}
+
 .nav-toggle{
     display: none;
     background: none;
