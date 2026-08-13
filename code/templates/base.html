@@ -57,5 +57,9 @@
 
         {% block content %}{% endblock %}
     </main>
+    <script
+        type="module"
+        src="{{ url_for('static', filename='js/app.js') }}"
+    ></script>
 </body>
 </html>
