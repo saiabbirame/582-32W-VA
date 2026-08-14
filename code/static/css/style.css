@@ -113,7 +113,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px;
+    padding: 80px 80px 40px;
     gap: 48px;
 }
 
@@ -187,6 +187,50 @@ body{
     width: 120%;
     height: auto;
     display: block;
+}
+
+/* CATEGORIES */
+.categories{
+    padding: 15px 80px;
+}
+
+.categories h2{
+    margin: 0 0 32px;
+    color: #1B1938;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.category-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.category-card{
+    padding: 24px 16px;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #3A4B3C;
+    text-decoration: none;
+    flex: 1;
+}
+
+.category-card i{
+    font-size: 50px;
+    color: #3A4B3C;
+    padding-top: 24px;
+}
+
+.category-card p{
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* RESPONSIVE DESIGN */
