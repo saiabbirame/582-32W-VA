@@ -220,12 +220,23 @@ body{
     color: #3A4B3C;
     text-decoration: none;
     flex: 1;
+    transition: 0.3s ease;
+}
+
+.category-card:hover{
+    background-color: #9AB7AE;
+    color: #F8FAFC;
 }
 
 .category-card i{
     font-size: 50px;
     color: #3A4B3C;
     padding-top: 24px;
+    transition: 0.3s ease;
+}
+
+.category-card:hover i{
+    color: #F8FAFC;
 }
 
 .category-card p{
