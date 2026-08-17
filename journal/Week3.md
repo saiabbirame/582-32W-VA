@@ -13,3 +13,10 @@ Today I focused mainly on the design portion of the project in Figma. I looked a
 Next, I'll start translating the updated Figma design into the actual application. I plan to work section by section, starting with shared elements like the navigation bar before moving on to the individual pages.
 
 Nothing is really blocking my progress on the project at the moment. However, I noticed that I haven't been very punctual with updating my journal entries, so I want to improve on that.
+
+## Wednesday
+Today I focused on building and styling the shared navigation bar for NextStop. I structured the navigation in my base template, linked the shared stylesheet, added the Poppins font and styled the logo, navigation links and Log In and Sign Up buttons based on my Figma design. I also started working on the responsive navigation. I created a mobile layout with a hamburger menu and added JavaScript to make the menu open and close when the hamburger icon is clicked. I also added hover and active states.
+
+Next, I will start working on the homepage content and continue translating my Figma design into the application.
+
+I had some difficulty getting the mobile navigation layout and hamburger menu positioned correctly but after adjusting the HTML structure and responsive CSS, I was able to get it working properly.
