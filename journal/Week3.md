@@ -20,3 +20,10 @@ Today I focused on building and styling the shared navigation bar for NextStop. 
 Next, I will start working on the homepage content and continue translating my Figma design into the application.
 
 I had some difficulty getting the mobile navigation layout and hamburger menu positioned correctly but after adjusting the HTML structure and responsive CSS, I was able to get it working properly.
+
+## Thursday
+Today I focused on building the homepage. I started by creating and styling the hero section. I also worked on making the hero section responsive so that the layout adapts properly on smaller screens. After that, I created the Browse by Category section with cards for the different place categories and added hover effects to make them more interactive. I also continued working on the overall responsive design of the homepage by adjusting the layout, spacing, font sizes and category grid for different screen sizes.
+
+Next, I will continue working on the pages and features of the application.
+
+I had a pretty eventful week outside of school so I wasn't able to dedicate as much time to the project as I had planned and unfortunately wasn't able to finish this week's deliverable on time. I'll need to catch up on the remaining work and continue making progress on the application.
