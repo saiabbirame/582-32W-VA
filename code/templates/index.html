@@ -68,11 +68,12 @@
     <div class="featured-list">
         {% for place in featured_places %}
             <article class="place-card">
-                <img src="{{ place.image_url }}" alt="{{ place.name }}">
+                <img src="{{ place.image_url }}" alt="{{ place.name }}" class="place-image">
                 <div class="place-card-content">
                     <p class="place-category">{{ place.category }}</p>
                     <h3>{{ place.name }}</h3>
-                    <p class="place-neighbourhood">{{ place.neighbourhood }}</p>
+                    <p class="place-neighbourhood"><i class="fa-solid fa-location-dot"></i>{{ place.neighbourhood }}</p>
+                    <a href="" class="details-button">View Details</a>
                 </div>
             </article>
         {% endfor %}

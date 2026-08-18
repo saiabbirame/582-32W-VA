@@ -109,6 +109,7 @@ body{
 }
 
 /* HOMEPAGE */
+/* HERO */
 .hero{
     display: flex;
     align-items: center;
@@ -244,10 +245,92 @@ body{
     font-weight: 500;
 }
 
+/* FEATURED PLACES */
+.featured-places{
+    padding: 48px 80px;
+}
+
+.featured-places h2{
+    margin: 0 0 32px;
+    color: #1B1938;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.featured-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.place-card{
+    overflow: hidden;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+}
+
+.place-card img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.place-card-content{
+    padding: 20px;
+}
+
+.place-category{
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background-color: #9AB7AE;
+    color: #F8FAFC;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.place-card h3{
+    margin: 0 0 12px;
+    color: #1B1938;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.place-neighbourhood{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 0 0 20px;
+    color: #3A4B3C;
+    font-size: 13px;
+}
+
+.details-button{
+    display: block;
+    padding: 10px 18px;
+    border: 1px solid #39588E;
+    border-radius: 8px;
+    color: #39588E;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.details-button:hover{
+    background-color: #39588E;
+    color: #F8FAFC;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
-/* HERO SECTION */
+/* HERO */
     .hero-text h1{
         font-size: 40px;
     }
