@@ -30,7 +30,6 @@
     <h2>Browse by Category</h2>
 
     <div class="category-list">
-
         <a href="" class="category-card">
             <i class="fa-solid fa-utensils"></i>
             <p>Restaurants</p>
@@ -60,6 +59,23 @@
             <i class="fa-solid fa-bag-shopping"></i>
             <p>Shopping</p>
         </a>
+    </div>
+</section>
+
+<section class="featured-places">
+    <h2>Featured Places</h2>
+
+    <div class="featured-list">
+        {% for place in featured_places %}
+            <article class="place-card">
+                <img src="{{ place.image_url }}" alt="{{ place.name }}">
+                <div class="place-card-content">
+                    <p class="place-category">{{ place.category }}</p>
+                    <h3>{{ place.name }}</h3>
+                    <p class="place-neighbourhood">{{ place.neighbourhood }}</p>
+                </div>
+            </article>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}
