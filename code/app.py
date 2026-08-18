@@ -219,7 +219,9 @@ def itineraries():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    featured_places = Place.query.limit(4).all()
+
+    return render_template("index.html", featured_places=featured_places)
 
 if __name__ == "__main__":
     app.run(debug=True)
