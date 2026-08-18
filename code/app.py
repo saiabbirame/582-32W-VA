@@ -221,7 +221,22 @@ def itineraries():
 def index():
     featured_places = Place.query.limit(4).all()
 
-    return render_template("index.html", featured_places=featured_places)
+    return render_template(
+        "index.html", 
+        featured_places=featured_places
+    )
+
+@app.route("/places/<int:place_id>")
+def place_details(place_id):
+    place = db.session.get(Place, place_id)
+
+    if place is None:
+        return "Place not found", 404
+    
+    return render_template(
+        "place_details.html",
+        place=place
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
