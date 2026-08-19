@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}{{ place.name }} | NextStop{% endblock %}
+
+{% block content %}
+<section class="place-details">
+    <a href="" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to places
+    </a>
+
+    <div class="place-details-main">
+        <div class="place-details-image">
+            <img src="{{ place.image_url }}" alt="{{ place.name }}">
+        </div>
+
+        <div class="place-details-info">
+            <h1>{{ place.name }}</h1>
+
+            <div class="place-details-summary">
+                <span class="place-category">{{ place.category }}</span>
+
+                <span class="place-neighbourhood">
+                    <i class="fa-solid fa-map"></i>
+                    {{ place.neighbourhood }}
+                </span>
+            </div>
+
+            <div class="place-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>{{ place.address }}</p>
+            </div>
+
+            <a href="" class="primary-button">
+                <i class="fa-solid fa-plus"></i>
+                Add to Itinerary
+            </a>
+        </div>
+    </div>
+
+    <div class="place-details-bottom">
+        <div class="place-description">
+            <h2>Description</h2>
+            <p>{{ place.description }}</p>
+        </div>
+
+        <div class="place-hours">
+            <h2>Opening hours</h2>
+            <p>{{ place.opening_hours }}</p>
+        </div>
+    </div>
+
+    <div class="place-map">
+        <h2>Location</h2>
+    </div>
+</section>
+{% endblock %}
