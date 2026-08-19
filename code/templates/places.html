@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Places | NextStop{% endblock %}
+
+{% block content %}
+<section class="places-page">
+    <h1>Browse Places</h1>
+
+    <div class="places-list">
+        {% for place in places %}
+            <article class="place-card">
+                <img src="{{ place.image_url }}" alt="{{ place.name }}" class="place-image">
+                <div class="place-card-content">
+                    <p class="place-category">{{ place.category }}</p>
+                    <h3>{{ place.name }}</h3>
+                    <p class="place-neighbourhood"><i class="fa-solid fa-location-dot"></i>{{ place.neighbourhood }}</p>
+                    <a href="{{ url_for('place_details', place_id=place.id) }}" class="details-button">View Details</a>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

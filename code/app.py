@@ -238,5 +238,14 @@ def place_details(place_id):
         place=place
     )
 
+@app.route("/places")
+def places():
+    all_the_places = Place.query.all()
+
+    return render_template(
+        "places.html",
+        places=all_the_places
+    )
+
 if __name__ == "__main__":
     app.run(debug=True)
