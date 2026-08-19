@@ -400,6 +400,7 @@ body{
     gap: 8px;
     margin-bottom: 40px;
     color: #3A4B3C;
+    font-size: 15px;
 }
 
 .place-address p{
@@ -471,6 +472,120 @@ body{
 #map{
     height: 250px;
     border-radius: 8px;
+}
+
+/* BROWSE PLACES */
+.places-page{
+    padding: 48px 80px;
+}
+
+.places-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.places-header-text{
+    width: 40%;
+}
+
+.places-header h1{
+    margin: 0 0 16px;
+    color: #1B1938;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.places-header p{
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.places-header-image{
+    width: 45%;
+}
+
+.places-header-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.places-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.places-tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.category-filters{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-button{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid #9AB7AE;
+    border-radius: 20px;
+    background-color: #F8FAFC;
+    color: #3A4B3C;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filter-button i{
+    font-size: 11px;
+}
+
+.filter-button:hover{
+    background-color: #9AB7AE;
+    color: #F8FAFC;
+}
+
+.filter-button.active{
+    background-color: #9AB7AE;
+    color: #F8FAFC;
+}
+
+.search-bar{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+}
+
+.search-bar i{
+    color: #3A4B3C;
+}
+
+.search-bar input{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: #3A4B3C;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }
 
 /* RESPONSIVE DESIGN */

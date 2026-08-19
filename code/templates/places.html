@@ -4,7 +4,34 @@
 
 {% block content %}
 <section class="places-page">
-    <h1>Browse Places</h1>
+    <div class="places-header">
+        <div class="places-header-text">
+            <h1>Browse Places</h1>
+
+            <p>Find the best places to eat, explore and enjoy in Montreal. Use filters to discover places that match your interests.</p>
+        </div>
+
+        <div class="places-header-image">
+            <img src="{{ url_for('static', filename='images/hero.png')}}" alt="Montreal illustration">
+        </div>
+    </div>
+
+    <div class="places-tools">
+        <div class="category-filters">
+            <button class="filter-button active">All</button>
+            <button class="filter-button"><i class="fa-solid fa-utensils"></i>Restaurants</button>
+            <button class="filter-button"><i class="fa-solid fa-mug-saucer"></i>Cafés</button>
+            <button class="filter-button"><i class="fa-solid fa-landmark"></i>Attractions</button>
+            <button class="filter-button"><i class="fa-solid fa-tree"></i>Parks</button>
+            <button class="filter-button"><i class="fa-solid fa-music"></i>Entertainment</button>
+            <button class="filter-button"><i class="fa-solid fa-bag-shopping"></i>Shopping</button>
+        </div>
+
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search places...">
+        </div>
+    </div>
 
     <div class="places-list">
         {% for place in places %}
