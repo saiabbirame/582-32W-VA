@@ -18,13 +18,13 @@
 
     <div class="places-tools">
         <div class="category-filters">
-            <button class="filter-button active">All</button>
-            <button class="filter-button"><i class="fa-solid fa-utensils"></i>Restaurants</button>
-            <button class="filter-button"><i class="fa-solid fa-mug-saucer"></i>Cafés</button>
-            <button class="filter-button"><i class="fa-solid fa-landmark"></i>Attractions</button>
-            <button class="filter-button"><i class="fa-solid fa-tree"></i>Parks</button>
-            <button class="filter-button"><i class="fa-solid fa-music"></i>Entertainment</button>
-            <button class="filter-button"><i class="fa-solid fa-bag-shopping"></i>Shopping</button>
+            <button class="filter-button active" data-category="All">All</button>
+            <button class="filter-button" data-category="Restaurants"><i class="fa-solid fa-utensils"></i>Restaurants</button>
+            <button class="filter-button" data-category="Cafés"><i class="fa-solid fa-mug-saucer"></i>Cafés</button>
+            <button class="filter-button" data-category="Attractions"><i class="fa-solid fa-landmark"></i>Attractions</button>
+            <button class="filter-button" data-category="Parks"><i class="fa-solid fa-tree"></i>Parks</button>
+            <button class="filter-button" data-category="Entertainment"><i class="fa-solid fa-music"></i>Entertainment</button>
+            <button class="filter-button" data-category="Shopping"><i class="fa-solid fa-bag-shopping"></i>Shopping</button>
         </div>
 
         <div class="search-bar">
@@ -35,7 +35,7 @@
 
     <div class="places-list">
         {% for place in places %}
-            <article class="place-card">
+            <article class="place-card" data-category="{{ place.category }}">
                 <img src="{{ place.image_url }}" alt="{{ place.name }}" class="place-image">
                 <div class="place-card-content">
                     <p class="place-category">{{ place.category }}</p>

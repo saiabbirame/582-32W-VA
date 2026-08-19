@@ -533,6 +533,7 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .filter-button{
@@ -608,6 +609,25 @@ body{
 /* FEATURED PLACES */
     .featured-list{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+/* BROWSE PLACES */
+    .places-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .places-tools{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .category-filters{
+        width: 100%;
+    }
+
+    .search-bar{
+        width: auto;
     }
 }
 
@@ -699,6 +719,25 @@ body{
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+
+/* BROWSE PLACES */
+    .places-page{
+        padding: 32px 24px;
+    }
+
+    .places-header{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .places-header-text,
+    .places-header-image{
+        width: 100%;
+    }
+
+    .places-list{
+        gap: 16px;
+    }
 }
 
 @media (max-width: 576px){
@@ -724,6 +763,49 @@ body{
 
 /* FEATURED PLACES */
     .featured-list{
+        grid-template-columns: 1fr;
+    }
+
+/* BROWSE PLACES */
+    .places-page{
+        padding: 24px 16px;
+    }
+
+    .places-header{
+        margin-bottom: 24px;
+        gap: 16px;
+    }
+
+    .places-header h1{
+        font-size: 30px;
+    }
+
+    .places-header p{
+        font-size: 14px;
+    }
+
+    .filter-button{
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .filter-button i{
+        font-size: 10px;
+    }
+
+    .search-bar{
+        padding: 8px 12px;
+    }
+
+    .search-bar input{
+        font-size: 12px;
+    }
+
+    .search-bar i{
+        font-size: 12px;
+    }
+
+    .places-list{
         grid-template-columns: 1fr;
     }
 }
