@@ -468,6 +468,11 @@ body{
     font-size: 14px;
 }
 
+#map{
+    height: 250px;
+    border-radius: 8px;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
