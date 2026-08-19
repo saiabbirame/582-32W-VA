@@ -20,10 +20,17 @@ body{
 }
 
 .nav-logo{
+    display: flex;
+    align-items: center;
     color: #F8FAFC;
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
+}
+
+.nav-logo i{
+    color: #9AB7AE;
+    font-size: 22px;
 }
 
 .nav-logo span{
