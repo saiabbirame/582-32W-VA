@@ -378,24 +378,37 @@ body{
     margin-bottom: 24px;
 }
 
-.place-neighbourhood{
-    display: flex;
+.place-details .place-category{
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    margin: 0;
+}
+
+.place-details-info .place-neighbourhood{
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
     color: #3A4B3C;
     font-size: 14px;
 }
 
 .place-address{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     color: #3A4B3C;
 }
 
 .place-address p{
     margin: 0;
+}
+
+.place-description{
+    margin: 0 0 28px;
+    color: #3A4B3C;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .place-details-bottom{
@@ -405,14 +418,13 @@ body{
     margin-top: 32px;
 }
 
-.place-description,
-.place-hours{
+.place-hours,
+.place-map{
     padding: 24px;
     border: 1px solid #9AB7AE;
     border-radius: 8px;
 }
 
-.place-description h2,
 .place-hours h2,
 .place-map h2{
     margin: 0 0 16px;
@@ -421,16 +433,16 @@ body{
     font-weight: 600;
 }
 
-.place-description p,
-.place-hours p{
-    margin: 0;
-    color: #3A4B3C;
-    font-size: 15px;
-    line-height: 1.6;
+.hours-list{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.place-map{
-    margin-top: 32px;
+.hours-list p{
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 14px;
 }
 
 /* RESPONSIVE DESIGN */

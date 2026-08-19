@@ -21,15 +21,18 @@
                 <span class="place-category">{{ place.category }}</span>
 
                 <span class="place-neighbourhood">
-                    <i class="fa-solid fa-map"></i>
                     {{ place.neighbourhood }}
                 </span>
             </div>
 
             <div class="place-address">
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-map"></i>
                 <p>{{ place.address }}</p>
             </div>
+
+            <p class="place-description">
+                {{ place.description }}
+            </p>
 
             <a href="" class="primary-button">
                 <i class="fa-solid fa-plus"></i>
@@ -39,19 +42,19 @@
     </div>
 
     <div class="place-details-bottom">
-        <div class="place-description">
-            <h2>Description</h2>
-            <p>{{ place.description }}</p>
-        </div>
-
         <div class="place-hours">
             <h2>Opening hours</h2>
-            <p>{{ place.opening_hours }}</p>
-        </div>
-    </div>
 
-    <div class="place-map">
-        <h2>Location</h2>
+            <div class="hours-list">
+                {% for hours in place.opening_hours.split(';') %}
+                    <p>{{ hours.strip() }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="place-map">
+            <h2>Location</h2>
+        </div>
     </div>
 </section>
 {% endblock %}
