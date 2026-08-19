@@ -13,7 +13,7 @@
         <p>Discover cafés, attractions, parks and hidden gems. Build personalized itineraries and explore Montreal with confidence.</p>
 
         <div class="hero-buttons">
-            <a href="" class="primary-button">Browse Places</a>
+            <a href="{{ url_for('places') }}" class="primary-button">Browse Places</a>
 
             {% if not current_user.is_authenticated %}
                 <a href="{{ url_for('register') }}" class="secondary-button">Sign Up Free</a>
