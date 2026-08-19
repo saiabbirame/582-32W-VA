@@ -362,10 +362,12 @@ body{
     padding: 32px;
     border: 1px solid #9AB7AE;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 .place-details-info h1{
-    margin: 0 0 16px;
+    margin: 0 0 10px;
     color: #1B1938;
     font-size: 36px;
     font-weight: 600;
@@ -375,7 +377,7 @@ body{
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .place-details .place-category{
@@ -396,7 +398,7 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #3A4B3C;
 }
 
@@ -409,6 +411,27 @@ body{
     color: #3A4B3C;
     font-size: 15px;
     line-height: 1.6;
+}
+
+.place-details-info .primary-button{
+    align-self: flex-start;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #39588E;
+    color: #F8FAFC;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.place-details-info .primary-button:hover{
+    background-color: #1B1938;
 }
 
 .place-details-bottom{
