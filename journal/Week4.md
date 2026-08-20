@@ -13,3 +13,10 @@ Today I continued working on the Places feature. I added the route and template 
 Next, I will finish integrating the Leaflet map by using the latitude and longitude stored in the database to display the location of each place. After that, I will continue working on the remaining Places functionality.
 
 My main challenge right now is catching up with the project because I am still quite behind. I am currently working on Deliverable 3 while we should already be working on Deliverable 4. Because of this, I am trying to make as much progress as possible each day so I can finish Deliverable 3 and catch up with the current deliverable.
+
+## Wednesday
+I continued working on Deliverable 3. I completed the Place Details page and integrated an interactive OpenStreetMap using Leaflet to display each place's location. I also worked on the Browse Places page. I connected the navigation between the Home, Browse Places and Place Details pages. I also completed the Login and Registration pages.
+
+Next, I will continue working on the remaining pages and functionality for Deliverable 3, especially the itinerary related pages. I also need to work on the functionality for the category filters and search bar on the Browse Places page.
+
+I am still trying to catch up because I am behind on the project. I am currently finishing Deliverable 3 while we should already be working on Deliverable 4, so I am trying to complete the remaining features.
