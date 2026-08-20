@@ -609,6 +609,112 @@ body{
     font-size: 14px;
 }
 
+/* LOGIN */
+.login-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 88px);
+    padding: 48px 24px;
+    background-image: url("../images/montreal_skyline.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-container{
+    width: 100%;
+    max-width: 460px;
+}
+
+.login-form{
+    padding: 40px;
+    border: 1px solid #9AB7AE;
+    border-radius: 12px;
+    background-color: rgba(248, 250, 252, 0.9);
+}
+
+.login-form h1{
+    margin: 0 0 12px;
+    color: #1B1938;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.login-description{
+    margin: 0 0 28px;
+    color: #3A4B3C;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label{
+    color: #1B1938;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input{
+    padding: 12px 14px;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+    color: #1B1938;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.form-group input:focus{
+    border: 1px solid #3A4B3C;
+}
+
+.login-submit{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #39588E;
+    color: #F8FAFC;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-submit:hover{
+    background-color: #1B1938;
+}
+
+.switch{
+    margin: 24px 0 0;
+    color: #3A4B3C;
+    font-size: 14px;
+    text-align: center;
+}
+
+.switch a{
+    color: #39588E;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch a:hover{
+    text-decoration: underline;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
@@ -827,5 +933,40 @@ body{
 
     .places-list{
         grid-template-columns: 1fr;
+    }
+
+/* LOGIN */
+    .login-page{
+        padding: 32px 16px;
+    }
+
+    .login-form{
+        padding: 28px 24px;
+    }
+
+    .login-form h1{
+        font-size: 28px;
+    }
+
+    .login-description{
+        font-size: 14px;
+    }
+
+    .form-group label{
+        font-size: 13px;
+    }
+
+    .form-group input{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .login-submit{
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .switch{
+        font-size: 13px;
     }
 }
