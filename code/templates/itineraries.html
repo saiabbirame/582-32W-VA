@@ -3,16 +3,46 @@
 {% block title %}My Itineraries | NextStop{% endblock %}
 
 {% block content %}
-<h1>My itineraries</h1>
+<section class="itineraries-page">
+    <div class="itineraries-header">
+        <div>
+            <h1>My Itineraries</h1>
+            <p>View and manage your plans for exploring Montreal.</p>
+        </div>
 
-{% if itineraries %}
-    {% for itinerary in itineraries %}
-        <article>
-            <h2>{{ itinerary.title }}</h2>
-            <p>{{ itinerary.date }}</p>
-        </article>
-    {% endfor %}
-{% else %}
-    <p>You have not created any itineraries yet.</p>
-{% endif %}
+        <a href="{{ url_for('create_itinerary') }}" class="primary-button">
+            <i class="fa-solid fa-plus"></i>
+            Create Itinerary
+        </a>
+    </div>
+
+    {% if itineraries %}
+    <div class="itineraries-list">
+        {% for itinerary in itineraries %}
+            <article class="itinerary-card">
+                <div class="itinerary-card-content">
+                    <h2>{{ itinerary.title }}</h2>
+
+                    <p class="itinerary-date">
+                        <i class="fa-solid fa-calendar"></i>
+                        {{ itinerary.date.strftime('%B %d, %Y')}}
+                    </p>
+
+                    <p class="itinerary-place-count">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        {{ itinerary.itinerary_places | length }} places
+                    </p>
+                </div>
+
+                <a href="" class="details-button">View Itinerary</a>
+            </article>
+        {% endfor %}
+    </div>
+
+    {% else %}
+        <div class="itineraries-empty">
+            <p>No itineraries yet.</p>
+        </div>
+    {% endif %}
+</section>
 {% endblock %}
