@@ -217,6 +217,22 @@ def itineraries():
         itineraries=user_itineraries
     )
 
+@app.route("/itineraries/<int:itinerary_id>")
+@login_required
+def itinerary_details(itinerary_id):
+    itinerary = db.session.get(Itinerary, itinerary_id)
+
+    if itinerary is None:
+        return "Itinerary not found", 404
+    
+    if itinerary.user_id != current_user.id:
+        return "Itinerary not found", 404
+    
+    return render_template(
+        "itinerary_details.html",
+        itinerary=itinerary
+    )
+
 @app.route("/")
 def index():
     featured_places = Place.query.limit(4).all()

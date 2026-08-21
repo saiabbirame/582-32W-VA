@@ -34,7 +34,7 @@
                     </p>
                 </div>
 
-                <a href="" class="details-button">View Itinerary</a>
+                <a href="{{ url_for('itinerary_details', itinerary_id=itinerary.id) }}" class="details-button">View Itinerary</a>
             </article>
         {% endfor %}
     </div>
