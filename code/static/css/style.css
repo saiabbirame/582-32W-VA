@@ -930,6 +930,58 @@ body{
     background-color: #1B1938;
 }
 
+/* ITINERARY DETAILS */
+.itinerary-details-page{
+    padding: 48px 80px;
+}
+
+.itinerary-details-header{
+    margin-bottom: 32px;
+}
+
+.itinerary-details-header h1{
+    margin: 0 0 12px;
+    color: #1B1938;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.itinerary-details-date{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 14px;
+}
+
+.itinerary-details-content{
+    padding: 28px;
+    border: 1px solid #9AB7AE;
+    border-radius: 12px;
+    background-color: #F8FAFC;
+}
+
+.itinerary-details-content h2{
+    margin: 0 0 24px;
+    color: #1B1938;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.itinerary-details-empty{
+    padding: 48px 24px;
+    border: 1px dashed #9AB7AE;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.itinerary-details-empty p{
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 14px;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
@@ -1111,6 +1163,16 @@ body{
     .itineraries-header h1{
         font-size: 32px;
     }
+
+/* ITINERARY DETAILS */
+    .itinerary-details-page{
+        padding: 32px 24px;
+    }
+
+    .itinerary-details-header h1{
+        font-size: 32px;
+    }
+
 }
 
 @media (max-width: 576px){
@@ -1306,6 +1368,27 @@ body{
 
     .create-itinerary-submit{
         font-size: 14px;
+    }
+
+/* ITINERARY DETAILS */
+    .itinerary-details-page{
+        padding: 24px 16px;
+    }
+
+    .itinerary-details-header h1{
+        font-size: 30px;
+    }
+
+    .itinerary-details-content{
+        padding: 20px;
+    }
+
+    .itinerary-details-empty{
+        padding: 36px 20px;
+    }
+
+    .itinerary-details-empty p{
+        font-size: 13px;
     }
 
 }
