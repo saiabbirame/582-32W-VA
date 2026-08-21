@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ itinerary.title }} | NextStop{% endblock %}
+
+{% block content %}
+<section class="itinerary-details-page">
+    <a href="{{ url_for('itineraries') }}" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to my itineraries
+    </a>
+
+    <div class="itinerary-details-header">
+        <div>
+            <h1>{{ itinerary.title }}</h1>
+
+            <p class="itinerary-details-date">
+                <i class="fa-solid fa-calendar"></i>
+                {{ itinerary.date.strftime('%B %d, %Y')}}
+            </p>
+        </div>
+    </div>
+
+    <div class="itinerary-details-content">
+        <h2>Places in this itinerary</h2>
+
+        {% if itinerary.itinerary_places %}
+            <div class="itinerary-places-list">
+                {% for itinerary_place in itinerary.itinerary_places %}
+                    <article class="itinerary-place">
+                        <div class="itinerary-place-time">
+                            {{ itinerary_place.visit_time.strftime('%I:%M %p')}}
+                        </div>
+
+                        <img src="{{ itinerary_place.place.image_url }}" alt="{{ itinerary_place.place.name }}">
+
+                        <div class="itinerary-place-info">
+                            <div class="itinerary-place-heading">
+                                <h3>{{ itinerary_place.place.name }}</h3>
+
+                                <span class="place-category">
+                                    {{ itinerary_place.place.category }}
+                                </span>
+                            </div>
+
+                            <p class="itinerary-place-address">
+                                <i class="fa-solid fa-map"></i>
+                                {{ itinerary_place.place.address }}
+                            </p>
+
+                            {% if itinerary_place.notes %}
+                                <p class="itinerary-place-notes">
+                                    {{ tiinerary_place.notes }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="itinerary-details-empty">
+                <p>No places have been added to this itinerary yet.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
