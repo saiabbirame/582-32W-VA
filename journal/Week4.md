@@ -20,3 +20,10 @@ I continued working on Deliverable 3. I completed the Place Details page and int
 Next, I will continue working on the remaining pages and functionality for Deliverable 3, especially the itinerary related pages. I also need to work on the functionality for the category filters and search bar on the Browse Places page.
 
 I am still trying to catch up because I am behind on the project. I am currently finishing Deliverable 3 while we should already be working on Deliverable 4, so I am trying to complete the remaining features.
+
+## Thursday
+I worked mainly on the itinerary section of NextStop. I built and styled the My Itineraries page, including the responsive layout and empty state. I also built and styled the Create Itinerary page and kept the design consistent with the rest of the website. After that, I added the route for the Itinerary Details page, connected the "View Itinerary" button to the correct itinerary and added a check to make sure users can only access their own itineraries. I then created the initial structure and styling for the Itinerary Details page.
+
+Next, I will work on the main itinerary workflow by allowing users to add places to one of their itineraries. Once places can actually be added and displayed on the Itinerary Details page, I will finish styling the itinerary place list using real database content.
+
+Nothing major is blocking me at the moment. I just can't fully style the Itinerary Details page yet because I don't have any places added to the itineraries. I want to finish the add place functionality first so I can actually see how the page looks with real data and then style it properly.
