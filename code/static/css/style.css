@@ -789,6 +789,9 @@ body{
     justify-content: space-between;
     gap: 32px;
     margin-bottom: 32px;
+    padding: 28px 32px;
+    border-radius: 12px;
+    background: #D5E1DE;
 }
 
 .itineraries-header h1{
@@ -827,6 +830,11 @@ body{
     border: 1px solid #9AB7AE;
     border-radius: 8px;
     background-color: #F8FAFC;
+    transition: 0.3s ease;
+}
+
+.itinerary-card:hover{
+    transform: translateY(-2px);
 }
 
 .itinerary-card-content h2{
@@ -861,6 +869,65 @@ body{
     margin: 0;
     color: #3A4B3C;
     font-size: 14px;
+}
+
+/* CREATE ITINERARY */
+.create-itinerary-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 88px);
+    padding: 48px 24px;
+    background-image: url("../images/montreal_skyline.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.create-itinerary-container{
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    border: 1px solid #9AB7AE;
+    border-radius: 12px;
+    background-color: rgba(248, 250, 252, 0.9);
+}
+
+.create-itinerary-container h1{
+    margin: 0 0 12px;
+    color: #1B1938;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.create-itinerary-description{
+    margin: 0 0 28px;
+    color: #3A4B3C;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.create-itinerary-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-itinerary-submit{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #39588E;
+    color: #F8FAFC;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.create-itinerary-submit:hover{
+    background-color: #1B1938;
 }
 
 /* RESPONSIVE DESIGN */
@@ -1218,6 +1285,27 @@ body{
 
     .itineraries-empty p{
         font-size: 13px;
+    }
+
+/* CREATE ITINERARY */
+    .create-itinerary-page{
+        padding: 24px 16px;
+    }
+
+    .create-itinerary-container{
+        padding: 24px;
+    }
+
+    .create-itinerary-container h1{
+        font-size: 26px;
+    }
+
+    .create-itinerary-description{
+        font-size: 13px;
+    }
+
+    .create-itinerary-submit{
+        font-size: 14px;
     }
 
 }
