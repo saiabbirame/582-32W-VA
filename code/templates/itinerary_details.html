@@ -33,14 +33,12 @@
 
                         <img src="{{ itinerary_place.place.image_url }}" alt="{{ itinerary_place.place.name }}">
 
-                        <div class="itinerary-place-info">
-                            <div class="itinerary-place-heading">
-                                <h3>{{ itinerary_place.place.name }}</h3>
+                        <div class="itinerary-place-info">               
+                            <h3>{{ itinerary_place.place.name }}</h3>
 
-                                <span class="place-category">
-                                    {{ itinerary_place.place.category }}
-                                </span>
-                            </div>
+                            <span class="place-category">
+                                {{ itinerary_place.place.category }}
+                            </span>                            
 
                             <p class="itinerary-place-address">
                                 <i class="fa-solid fa-map"></i>
@@ -49,7 +47,7 @@
 
                             {% if itinerary_place.notes %}
                                 <p class="itinerary-place-notes">
-                                    {{ tiinerary_place.notes }}
+                                    {{ itinerary_place.notes }}
                                 </p>
                             {% endif %}
                         </div>

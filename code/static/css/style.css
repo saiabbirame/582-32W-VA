@@ -963,7 +963,7 @@ body{
 }
 
 .itinerary-details-content h2{
-    margin: 0 0 24px;
+    margin: 0 0 30px;
     color: #1B1938;
     font-size: 22px;
     font-weight: 600;
@@ -980,6 +980,73 @@ body{
     margin: 0;
     color: #3A4B3C;
     font-size: 14px;
+}
+
+.itinerary-places-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.itinerary-place{
+    display: grid;
+    grid-template-columns: 100px 120px 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0 24px;
+    border-bottom: 1px solid #D5E1DE;
+}
+
+.itinerary-place:last-child{
+    border-bottom: none;
+}
+
+.itinerary-place-time{
+    color: #1B1938;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.itinerary-place img{
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.itinerary-place-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+}
+
+.itinerary-place-info h3{
+    margin: 0;
+    color: #1B1938;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.itinerary-place-info .place-category{
+    position: relative;
+    top: 2px;
+}
+
+.itinerary-place-address{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 13px;
+}
+
+.itinerary-place-notes{
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* RESPONSIVE DESIGN */
@@ -1171,6 +1238,25 @@ body{
 
     .itinerary-details-header h1{
         font-size: 32px;
+    }
+
+/* ITINERARY DETAILS */
+    .itinerary-details-page{
+        padding: 32px 24px;
+    }
+
+    .itinerary-details-header h1{
+        font-size: 32px;
+    }
+
+    .itinerary-place{
+        grid-template-columns: 80px 100px 1fr;
+        gap: 16px;
+    }
+
+    .itinerary-place img{
+        width: 100px;
+        height: 80px;
     }
 
 }
@@ -1381,6 +1467,56 @@ body{
 
     .itinerary-details-content{
         padding: 20px;
+    }
+
+    .itinerary-details-empty{
+        padding: 36px 20px;
+    }
+
+    .itinerary-details-empty p{
+        font-size: 13px;
+    }
+
+/* ITINERARY DETAILS */
+    .itinerary-details-page{
+        padding: 24px 16px;
+    }
+
+    .itinerary-details-header h1{
+        font-size: 30px;
+    }
+
+    .itinerary-details-content{
+        padding: 20px;
+    }
+
+    .itinerary-details-content h2{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .itinerary-place{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px 0 24px;
+    }
+
+    .itinerary-place-time{
+        font-size: 14px;
+    }
+
+    .itinerary-place img{
+        width: 100%;
+        height: 180px;
+    }
+
+    .itinerary-place-info h3{
+        font-size: 17px;
+    }
+
+    .itinerary-place-address,
+    .itinerary-place-notes{
+        font-size: 13px;
     }
 
     .itinerary-details-empty{
