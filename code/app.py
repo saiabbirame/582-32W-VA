@@ -233,60 +233,75 @@ def itinerary_details(itinerary_id):
         itinerary=itinerary
     )
 
-@app.route("/places/<int:place_id>/add", methods=["POST"])
+@app.route("/places/<int:place_id>/add", methods=["GET", "POST"])
 @login_required
-def add_place_to_itinerary(place_id):
+def add_place_form(place_id):
     place = db.session.get(Place, place_id)
 
     if place is None:
         return "Place not found", 404
     
-    itinerary_id = request.form["itinerary_id"]
-    visit_time_value = request.form["visit_time"]
-    notes = request.form.get("notes", "").strip()
+    user_itineraries = Itinerary.query.filter_by(
+        user_id=current_user.id
+    ).order_by(Itinerary.date).all()
 
-    itinerary = db.session.get(Itinerary, int(itinerary_id))
+    if request.method == "POST":
+        itinerary_id = request.form["itinerary_id"]
+        visit_time_value = request.form["visit_time"]
+        notes = request.form.get("notes", "").strip()
 
-    if itinerary is None or itinerary.user_id != current_user.id:
-        return "Itinerary not found", 404
+        itinerary = db.session.get(Itinerary, int(itinerary_id))
+
+        if itinerary is None or itinerary.user_id != current_user.id:
+            return "Itinerary not found", 404
+        
+        errors = []
+
+        if not visit_time_value:
+            errors.append("Visit time is required.")
+
+        if len(notes) > 500:
+            errors.append("Notes may contain at most 500 characters.")
+
+        existing_place = ItineraryPlace.query.filter_by(
+            itinerary_id=itinerary.id,
+            place_id=place.id
+        ).first()
+
+        if existing_place:
+            errors.append("This place is already in your itinerary.")
+
+        if errors:
+            for error in errors:
+                flash(error, "error")
+
+            return render_template(
+                "add_place.html",
+                place=place,
+                itineraries=user_itineraries
+            )
     
-    errors = []
+        itinerary_place = ItineraryPlace(
+            itinerary_id=itinerary.id,
+            place_id=place.id,
+            visit_time=datetime.strptime(
+                visit_time_value, "%H:%M"
+            ).time(),
+            notes=notes or None
+        )
 
-    if not visit_time_value:
-        errors.append("Visit time is required.")
+        db.session.add(itinerary_place)
+        db.session.commit()
 
-    if len(notes) > 500:
-        errors.append("Notes may contain at most 500 characters.")
+        flash("Place added to your itinerary.", "success")
 
-    existing_place = ItineraryPlace.query.filter_by(
-        itinerary_id=itinerary.id,
-        place_id=place.id
-    ).first()
+        return redirect(url_for("itinerary_details", itinerary_id=itinerary.id))
 
-    if existing_place:
-        errors.append("This place is already in your itinerary.")
-
-    if errors:
-        for error in errors:
-            flash(error, "error")
-
-        return redirect(url_for("place_details", place_id=place.id))
-    
-    itinerary_place = ItineraryPlace(
-        itinerary_id=itinerary.id,
-        place_id=place.id,
-        visit_time=datetime.strptime(
-            visit_time_value, "%H:%M"
-        ).time(),
-        notes=notes or None
+    return render_template(
+        "add_place.html",
+        place=place,
+        itineraries=user_itineraries
     )
-
-    db.session.add(itinerary_place)
-    db.session.commit()
-
-    flash("Place added to your itinerary.", "success")
-
-    return redirect(url_for("itinerary_details", itinerary_id=itinerary.id))
 
 @app.route("/")
 def index():

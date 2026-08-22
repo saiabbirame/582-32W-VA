@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Add to Itinerary | NextStop{% endblock %}
+
+{% block content %}
+<section class="add-place-page">
+    <a href="{{ url_for('place_details', place_id=place.id) }}" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to place
+    </a>
+
+    <div class="add-place-container">
+        <h1>Add to Itinerary</h1>
+
+        <p class="add-place-description">Add {{ place.name }} to one of your itineraries.</p>
+
+        <form 
+            method="post"
+        >
+            <div class="form-group">
+                <label for="itinerary">Itinerary</label>
+
+                <select
+                    id="itinerary"
+                    name="itinerary_id"
+                    required
+                >
+                    <option value="">Select an itinerary</option>
+
+                    {% for itinerary in itineraries %}
+                        <option value="{{ itinerary.id }}">{{ itinerary.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="visit-time">Visit Time</label>
+
+                <input
+                    id="visit-time"
+                    name="visit_time"
+                    type="time"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+
+                <textarea
+                    id="notes"
+                    name="notes"
+                    maxlength="500"
+                    placeholder="Add an optional note"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="add-place-submit">
+                Add Place
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}
