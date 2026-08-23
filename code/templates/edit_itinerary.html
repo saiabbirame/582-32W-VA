@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Itinerary | NextStop{% endblock %}
+
+{% block content %}
+<section class="edit-itinerary-page">
+    <a href="{{ url_for('itinerary_details', itinerary_id=itinerary.id) }}" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to itinerary
+    </a>
+
+    <div class="edit-itinerary-container">
+        <h1>Edit Itinerary</h1>
+
+        <p class="edit-itinerary-description">Update your itinerary details.</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    maxlength="100"
+                    value="{{ itinerary.title }}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+
+                <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    value="{{ itinerary.date.strftime('%Y-%m-%d') }}"
+                    required
+                >
+            </div>
+
+            <div class="edit-itinerary-places">
+                <h2>Places</h2>
+
+                {% if itinerary.itinerary_places %}
+                    {% for itinerary_place in itinerary.itinerary_places %}
+                        <div class="edit-itinerary-place">
+                            <h3>{{ itinerary_place.place.name }}</h3>
+
+                            <p>{{ itinerary_place.place.category }}</p>
+
+                            <div class="form-group">
+                                <label for="visit-time-{{ itinerary_place.id }}">Visit Time</label>
+
+                                <input
+                                    id="visit-time-{{ itinerary_place.id }}"
+                                    name="visit_time_{{ itinerary_place.id }}"
+                                    type="time"
+                                    value="{{ itinerary_place.visit_time.strftime('%H:%M') }}"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="notes-{{ itinerary_place.id }}">Notes</label>
+
+                                <textarea
+                                    id="notes-{{ itinerary_place.id }}"
+                                    name="notes_{{ itinerary_place.id }}"
+                                    maxlength="500"
+                                >{{ itinerary_place.notes or '' }}</textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="remove-place-button"
+                                formaction="{{ url_for('remove_place_from_itinerary', itinerary_id=itinerary.id, itinerary_place_id=itinerary_place.id) }}">
+                                <i class="fa-solid fa-trash"></i>
+                                Remove
+                            </button>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No places have been added to this itinerary yet.</p>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="edit-itinerary-submit">
+                Save Changes
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

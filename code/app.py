@@ -233,6 +233,105 @@ def itinerary_details(itinerary_id):
         itinerary=itinerary
     )
 
+@app.route("/itineraries/<int:itinerary_id>/edit", methods=["GET", "POST"])
+@login_required
+def edit_itinerary(itinerary_id):
+    itinerary = db.session.get(Itinerary, itinerary_id)
+
+    if itinerary is None or itinerary.user_id != current_user.id:
+        return "Itinerary not found", 404
+
+    if request.method == "POST":
+        title = request.form["title"].strip()
+        date_value = request.form["date"]
+
+        errors = []
+
+        if not title:
+            errors.append("Itinerary title is required.")
+
+        if len(title) > 100:
+            errors.append("Itinerary title may contain at most 100 characters.")
+
+        if not date_value:
+            errors.append("Itinerary date is required.")
+
+        for itinerary_place in itinerary.itinerary_places:
+            visit_time_value = request.form[
+                f"visit_time_{itinerary_place.id}"
+            ]
+
+            notes = request.form.get(
+                f"notes_{itinerary_place.id}",
+                ""
+            ).strip()
+
+            if not visit_time_value:
+                errors.append(f"Visit time is required for {itinerary_place.place.name}")
+
+            if len(notes) > 500:
+                errors.append(f"Notes for {itinerary_place.place.name} may contain at most 500 chaarcters.")
+
+        if errors:
+            for error in errors:
+                flash(error, "error")
+
+            return render_template(
+                "edit_itinerary.html",
+                itinerary=itinerary
+            )
+        
+        itinerary.title = title
+        itinerary.date = date.fromisoformat(date_value)
+
+        for itinerary_place in itinerary.itinerary_places:
+            visit_time_value = request.form[
+                f"visit_time_{itinerary_place.id}"
+            ]
+
+            notes = request.form.get(
+                f"notes_{itinerary_place.id}",
+                ""
+            ).strip()
+
+            itinerary_place.visit_time = datetime.strptime(
+                visit_time_value,
+                "%H:%M"
+            ).time()
+
+            itinerary_place.notes = notes or None
+
+        db.session.commit()
+
+        flash("Your itinerary has been updated.", "success")
+
+        return redirect(url_for("itinerary_details", itinerary_id=itinerary.id))
+    
+    return render_template(
+        "edit_itinerary.html",
+        itinerary=itinerary
+    )
+
+@app.route("/itineraries/<int:itinerary_id>/places/<int:itinerary_place_id>/delete", methods=["POST"])
+@login_required
+def remove_place_from_itinerary(itinerary_id, itinerary_place_id):
+    itinerary = db.session.get(Itinerary, itinerary_id)
+
+    if itinerary is None or itinerary.user_id != current_user.id:
+        return "Itinerary not found", 404
+    
+    itinerary_place = db.session.get(ItineraryPlace, itinerary_place_id)
+
+    if itinerary_place is None or itinerary_place.itinerary_id != itinerary.id:
+        return "Place not found in itinerary", 404
+    
+    db.session.delete(itinerary_place)
+    db.session.commit()
+
+    flash("Place removed from your itinerary.", "success")
+
+    return redirect(url_for("edit_itinerary", itinerary_id=itinerary.id))
+
 @app.route("/places/<int:place_id>/add", methods=["GET", "POST"])
 @login_required
 def add_place_form(place_id):
