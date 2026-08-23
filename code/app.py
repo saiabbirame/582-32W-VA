@@ -332,6 +332,21 @@ def remove_place_from_itinerary(itinerary_id, itinerary_place_id):
 
     return redirect(url_for("edit_itinerary", itinerary_id=itinerary.id))
 
+@app.route("/itineraries/<int:itinerary_id>/delete", methods=["POST"])
+@login_required
+def delete_itinerary(itinerary_id):
+    itinerary = db.session.get(Itinerary, itinerary_id)
+
+    if itinerary is None or itinerary.user_id != current_user.id:
+        return "Itinerary not found", 404
+    
+    db.session.delete(itinerary)
+    db.session.commit()
+
+    flash("Your itinerary has been deleted.", "success")
+
+    return redirect(url_for("itineraries"))
+
 @app.route("/places/<int:place_id>/add", methods=["GET", "POST"])
 @login_required
 def add_place_form(place_id):
