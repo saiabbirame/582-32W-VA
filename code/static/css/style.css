@@ -496,10 +496,97 @@ body{
 }
 
 /* ADD PLACE */
+.add-place-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    min-height: calc(100vh - 88px);
+    background-image: url("../images/montreal_skyline.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.add-place-container{
+    width: 100%;
+    padding: 40px;
+    border: 1px solid #9AB7AE;
+    border-radius: 12px;
+    background-color: rgba(248, 250, 252, 0.9);
+    box-sizing: border-box;
+}
+
+.add-place-container h1{
+    margin: 0 0 12px;
+    color: #1B1938;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.add-place-description{
+    margin: 0 0 28px;
+    color: #3A4B3C;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.add-place-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-place-container select,
+.add-place-container textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+    color: #1B1938;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.add-place-container select:focus,
+.add-place-container textarea:focus{
+    border: 1px solid #3A4B3C;
+}
+
+.add-place-container textarea{
+    min-height: 90px;
+    resize: vertical;
+}
+
 .add-place-submit{
     align-self: flex-start;
+    padding: 12px 20px;
     border: none;
+    border-radius: 8px;
+    background-color: #39588E;
+    color: #F8FAFC;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-place-submit:hover{
+    background-color: #1B1938;
+}
+
+.add-place-wrapper{
+    width: 100%;
+    max-width: 600px;
+}
+
+.add-place-wrapper .back-link{
+    display: inline-flex;
+    margin-bottom: 20px;
 }
 
 /* BROWSE PLACES */
@@ -1193,6 +1280,27 @@ body{
         gap: 16px;
     }
 
+/* ADD PLACE */
+.add-place-page{
+    padding: 32px 24px;
+}
+
+.add-place-wrapper{
+    max-width: 560px;
+}
+
+.add-place-container{
+    padding: 32px;
+}
+
+.add-place-container h1{
+    font-size: 28px;
+}
+
+.add-place-description{
+    font-size: 14px;
+}
+
 /* BROWSE PLACES */
     .places-page{
         padding: 32px 24px;
@@ -1286,8 +1394,34 @@ body{
     }
 
 /* ADD PLACE */
+    .add-place-page{
+        padding: 24px 16px;
+    }
+
+    .add-place-wrapper{
+        max-width: 100%;
+    }
+
+    .add-place-container{
+        padding: 24px;
+    }
+
+    .add-place-container h1{
+        font-size: 26px;
+    }
+
+    .add-place-description{
+        font-size: 13px;
+    }
+
+    .add-place-container select,
+    .add-place-container textarea{
+        font-size: 13px;
+    }
+
     .add-place-submit{
         width: 100%;
+        font-size: 14px;
     }
 
 /* BROWSE PLACES */
