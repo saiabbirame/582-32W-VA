@@ -22,3 +22,28 @@ if (mapContainer) {
 
     const marker = L.marker([latitude, longitude]).addTo(map);
 }
+
+// SEARCH
+const placeSearch = document.querySelector('#place-search');
+const placeCards = document.querySelectorAll('.place-card');
+
+if (placeSearch && placeCards.length > 0) {
+    placeSearch.addEventListener("input", () => {
+        const searchTerm = placeSearch.value
+            .trim()
+            .toLowerCase();
+
+        placeCards.forEach((card) => {
+            const placeName = card
+                .querySelector("h3")
+                .textContent
+                .toLowerCase();
+
+            if (placeName.includes(searchTerm)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}
