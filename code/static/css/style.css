@@ -1534,6 +1534,31 @@ body{
         height: 80px;
     }
 
+/* EDIT ITINERARY */
+    .edit-itinerary-page{
+        padding: 32px 24px;
+    }
+
+    .edit-itinerary-container{
+        padding: 28px;
+    }
+
+    .edit-itinerary-container h1{
+        font-size: 28px;
+    }
+
+    .edit-itinerary-description{
+        font-size: 13px;
+    }
+
+    .edit-itinerary-place{
+        padding: 24px 20px;
+    }
+
+    .edit-itinerary-place h2{
+        font-size: 20px;
+    }
+
 }
 
 @media (max-width: 576px){
@@ -1810,6 +1835,76 @@ body{
 
     .itinerary-details-empty p{
         font-size: 13px;
+    }
+
+/* EDIT ITINERARY */
+    .edit-itinerary-page{
+        padding: 24px 16px;
+    }
+
+    .edit-itinerary-container{
+        padding: 20px;
+    }
+
+    .edit-itinerary-container h1{
+        font-size: 26px;
+    }
+
+    .edit-itinerary-description{
+        font-size: 13px;
+    }
+
+    .edit-itinerary-places{
+        margin-top: 16px;
+    }
+
+    .edit-itinerary-places h2{
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .edit-itinerary-place{
+        padding: 20px 16px;
+        margin-bottom: 20px;
+    }
+
+    .edit-itinerary-place h3{
+        font-size: 17px;
+    }
+
+    .edit-itinerary-place p{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .edit-itinerary-place textarea{
+        font-size: 13px;
+    }
+
+    .remove-place-button{
+        width: 100%;
+    }
+
+    .edit-itinerary-submit{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .delete-itinerary-section{
+        margin-top: 16px;
+        padding-top: 20px;
+    }
+
+    .delete-itinerary-section h2{
+        font-size: 18px;
+    }
+
+    .delete-itinerary-section p{
+        font-size: 12px;
+    }
+
+    .delete-itinerary-button{
+        width: 100%;
     }
 
 }
