@@ -1143,6 +1143,175 @@ body{
     line-height: 1.5;
 }
 
+/* EDIT ITINERARY */
+.edit-itinerary-page{
+    padding: 48px 80px;
+}
+
+.edit-itinerary-container{
+    max-width: 800px;
+    padding: 32px;
+    border: 1px solid #9AB7AE;
+    border-radius: 12px;
+    margin: 32px auto 0;
+    background-color: #F8FAFC;
+    box-sizing: border-box;
+}
+
+.edit-itinerary-container h1{
+    margin: 0 0 8px;
+    color: #1B1938;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.edit-itinerary-description{
+    color: #3A4B3C;
+    font-size: 14px;
+    margin: 0 0 28px;
+}
+
+.edit-itinerary-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-itinerary-places{
+    margin-top: 20px;
+}
+
+.edit-itinerary-places h2{
+    color: #1B1938;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 24px;
+}
+
+.edit-itinerary-place{
+    padding: 28px 24px;
+    border: 1px solid #D5E1DE;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    background-color: #D5E1DE;
+    box-sizing: border-box;
+}
+
+.edit-itinerary-place:last-child{
+    margin-bottom: 0;
+}
+
+.edit-itinerary-place h3{
+    color: #1B1938;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.edit-itinerary-place p{
+    color: #3A4B3C;
+    font-size: 13px;
+    margin: 0 0 24px;
+}
+
+.edit-itinerary-place .form-group{
+    margin-bottom: 16px;
+}
+
+.edit-itinerary-place input,
+.edit-itinerary-place textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.remove-place-button{
+    color: #901C14;
+    border: 1px solid #901C14;
+    border-radius: 6px;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.remove-place-button:hover{
+    background-color: #901C14;
+    color: #F8FAFC;
+}
+
+.edit-itinerary-place textarea{
+    background-color: #F8FAFC;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+    border: 1px solid #9AB7AE;
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 12px 14px;
+}
+
+.edit-itinerary-place textarea:focus{
+    border: 1px solid #3A4B3C;
+}
+
+.edit-itinerary-submit{
+    align-self: flex-start;
+    background-color: #39588E;
+    color: #F8FAFC;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.edit-itinerary-submit:hover{
+    background-color: #1B1938;
+}
+
+.delete-itinerary-section{
+    border-top: 1px solid #D5E1DE;
+    margin-top: 20px;
+    padding-top: 24px;
+}
+
+.delete-itinerary-section h2{
+    color: #901C14;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.delete-itinerary-section p{
+    color: #3A4B3C;
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+
+.delete-itinerary-button{
+    border: 1px solid #901C14;
+    border-radius: 6px;
+    padding: 10px 16px;
+    background-color: #901C14;
+    color: #F8FAFC;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.delete-itinerary-button:hover{
+    background-color: #F8FAFC;
+    color: #901C14;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
