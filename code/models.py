@@ -140,7 +140,8 @@ class Itinerary(db.Model):
 
     itinerary_places = db.relationship(
         "ItineraryPlace",
-        back_populates="itinerary"
+        back_populates="itinerary",
+        cascade="all, delete-orphan"
     )
 
     def __repr__(self):

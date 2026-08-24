@@ -89,6 +89,20 @@
             <button type="submit" class="edit-itinerary-submit">
                 Save Changes
             </button>
+
+            <div class="delete-itinerary-section">
+                <h2>Delete Itinerary</h2>
+
+                <p>This will permanently delete this itinerary and all of its saved places.</p>
+
+                <button
+                    type="submit"
+                    class="delete-itinerary-button"
+                    formaction="{{ url_for('delete_itinerary', itinerary_id=itinerary.id) }}">
+                        <i class="fa-solid fa-trash"></i>
+                        Delete Itinerary
+                </button>
+            </div>
         </form>
     </div>
 </section>
