@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Places | NextStop{% endblock %}
+
+{% block content %}
+<section class="admin-places-page">
+    <div class="admin-places-header">
+        <div>
+            <h1>Manage Places</h1>
+            <p>Add, edit and delete the places available in NextStop.</p>
+        </div>
+
+        <a href="" class="primary-button">
+            <i class="fa-solid fa-plus"></i>
+            Add Place
+        </a>
+    </div>
+
+    {% if places %}
+        <div class="admin-places-list">
+            {% for place in places %}
+                <article class="admin-place-card">
+                    <div>
+                        <h2>{{ place.name }}</h2>
+
+                        <p>{{ place.category }}</p>
+
+                        <p>{{ place.neighbourhood }}</p>
+                    </div>
+
+                    <div class="admin-place-actions">
+                        <a href="">Edit</a>
+
+                        <button type="button">
+                            Delete
+                        </button>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No places are available.</p>
+    {% endif %}
+</section>
+{% endblock %}

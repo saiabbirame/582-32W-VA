@@ -464,5 +464,18 @@ def places():
         selected_category=category
     )
 
+@app.route("/admin/places")
+@login_required
+def admin_places():
+    if not current_user.is_admin:
+        return "Access denied", 403
+    
+    all_places = Place.query.all()
+
+    return render_template(
+        "admin_places.html",
+        places=all_places
+    )
+
 if __name__ == "__main__":
     app.run(debug=True)
