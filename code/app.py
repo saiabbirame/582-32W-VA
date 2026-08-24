@@ -448,7 +448,15 @@ def place_details(place_id):
 
 @app.route("/places")
 def places():
-    all_the_places = Place.query.all()
+    category = request.args.get("category")
+
+    if category:
+        all_the_places = Place.query.filter_by(
+            category=category
+        ).all()
+
+    else:
+        all_the_places = Place.query.all()
 
     return render_template(
         "places.html",

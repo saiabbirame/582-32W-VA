@@ -30,32 +30,32 @@
     <h2>Browse by Category</h2>
 
     <div class="category-list">
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Restaurants') }}" class="category-card">
             <i class="fa-solid fa-utensils"></i>
             <p>Restaurants</p>
         </a>
 
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Cafés') }}" class="category-card">
             <i class="fa-solid fa-mug-saucer"></i>
             <p>Cafés</p>
         </a>
 
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Attractions') }}" class="category-card">
             <i class="fa-solid fa-landmark"></i>
             <p>Attractions</p>
         </a>
 
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Parks') }}" class="category-card">
             <i class="fa-solid fa-tree"></i>
             <p>Parks</p>
         </a>
 
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Entertainment') }}" class="category-card">
             <i class="fa-solid fa-music"></i>
             <p>Entertainment</p>
         </a>
 
-        <a href="" class="category-card">
+        <a href="{{ url_for('places', category='Shopping') }}" class="category-card">
             <i class="fa-solid fa-bag-shopping"></i>
             <p>Shopping</p>
         </a>
