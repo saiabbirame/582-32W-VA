@@ -33,6 +33,12 @@ class User(UserMixin, db.Model):
         nullable=False
     )
 
+    is_admin = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False
+    )
+
     itineraries = db.relationship(
         "Itinerary",
         back_populates="user"
