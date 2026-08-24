@@ -460,7 +460,8 @@ def places():
 
     return render_template(
         "places.html",
-        places=all_the_places
+        places=all_the_places,
+        selected_category=category
     )
 
 if __name__ == "__main__":

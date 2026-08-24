@@ -18,13 +18,13 @@
 
     <div class="places-tools">
         <div class="category-filters">
-            <button class="filter-button active" data-category="All">All</button>
-            <button class="filter-button" data-category="Restaurants"><i class="fa-solid fa-utensils"></i>Restaurants</button>
-            <button class="filter-button" data-category="Cafés"><i class="fa-solid fa-mug-saucer"></i>Cafés</button>
-            <button class="filter-button" data-category="Attractions"><i class="fa-solid fa-landmark"></i>Attractions</button>
-            <button class="filter-button" data-category="Parks"><i class="fa-solid fa-tree"></i>Parks</button>
-            <button class="filter-button" data-category="Entertainment"><i class="fa-solid fa-music"></i>Entertainment</button>
-            <button class="filter-button" data-category="Shopping"><i class="fa-solid fa-bag-shopping"></i>Shopping</button>
+            <a href="{{ url_for('places') }}" class="filter-button {{ 'active' if not selected_category }}">All</a>
+            <a href="{{ url_for('places', category='Restaurants') }}" class="filter-button {{ 'active' if selected_category == 'Restaurants' }}"><i class="fa-solid fa-utensils"></i>Restaurants</a>
+            <a href="{{ url_for('places', category='Cafés') }}" class="filter-button {{ 'active' if selected_category == 'Cafés' }}"><i class="fa-solid fa-mug-saucer"></i>Cafés</a>
+            <a href="{{ url_for('places', category='Attractions') }}" class="filter-button {{ 'active' if selected_category == 'Attractions' }}"><i class="fa-solid fa-landmark"></i>Attractions</a>
+            <a href="{{ url_for('places', category='Parks') }}" class="filter-button {{ 'active' if selected_category == 'Parks' }}"><i class="fa-solid fa-tree"></i>Parks</a>
+            <a href="{{ url_for('places', category='Entertainment') }}" class="filter-button {{ 'active' if selected_category == 'Entertainment' }}"><i class="fa-solid fa-music"></i>Entertainment</a>
+            <a href="{{ url_for('places', category='Shopping') }}" class="filter-button {{ 'active' if selected_category == 'Shopping' }}"><i class="fa-solid fa-bag-shopping"></i>Shopping</a>
         </div>
 
         <div class="search-bar">

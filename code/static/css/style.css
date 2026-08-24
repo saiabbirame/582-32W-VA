@@ -684,6 +684,7 @@ body{
     color: #3A4B3C;
     font-family: "Poppins", sans-serif;
     font-size: 13px;
+    text-decoration: none;
     cursor: pointer;
 }
 
