@@ -1132,15 +1132,19 @@ body{
     align-items: center;
     gap: 6px;
     margin: 0;
-    color: #3A4B3C;
+    color: #5F6F65;
     font-size: 13px;
 }
 
 .itinerary-place-notes{
-    margin: 0;
+    margin: 6px 0 0;
     color: #3A4B3C;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
+    padding: 8px 12px;
+    border-left: 3px solid #9AB7AE;
+    border-radius: 3px;
+    background-color: #E6F2EE;
 }
 
 /* EDIT ITINERARY */
