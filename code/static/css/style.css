@@ -286,7 +286,7 @@ main{
 }
 
 .category-card i{
-    font-size: 50px;
+    font-size: 40px;
     color: #3A4B3C;
     padding-top: 24px;
     transition: 0.3s ease;
@@ -297,7 +297,7 @@ main{
 }
 
 .category-card p{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
