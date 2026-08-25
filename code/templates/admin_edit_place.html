@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Place | NextStop{% endblock %}
+
+{% block content %}
+<section class="admin-place-form-page">
+    <a href="{{ url_for('admin_places') }}" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to manage places
+    </a>
+
+    <div class="admin-place-form-container">
+        <h1>Edit Place</h1>
+
+        <p class="admin-place-form-description">
+            Update the place information.
+        </p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    maxlength="120"
+                    value="{{ place.name }}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select
+                    id="category"
+                    name="category"
+                    required
+                >
+                    <option value="Restaurants" {{ selected if place.category == 'Restaurants' }}>Restaurants</option>
+                    <option value="Cafés" {{ selected if place.category == 'Cafés' }}>Cafés</option>
+                    <option value="Attractions" {{ selected if place.category == 'Attractions' }}>Attractions</option>
+                    <option value="Parks" {{ selected if place.category == 'Parks' }}>Parks</option>
+                    <option value="Entertainment" {{ selected if place.category == 'Entertainment' }}>Entertainment</option>
+                    <option value="Shopping" {{ selected if place.category == 'Shopping' }}>Shopping</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="neighbourhood">Neighbourhood</label>
+
+                <input
+                    id="neighbourhood"
+                    name="neighbourhood"
+                    type="text"
+                    maxlength="100"
+                    value="{{ place.neighbourhood }}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+
+                <input
+                    id="address"
+                    name="address"
+                    type="text"
+                    maxlength="255"
+                    value="{{ place.address }}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    required
+                >{{ place.description }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="opening-hours">Opening Hours</label>
+
+                <textarea
+                    id="opening-hours"
+                    name="opening_hours"
+                    maxlength="255"
+                    required
+                >{{ place.opening_hours }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image-url">Image URL</label>
+
+                <input
+                    id="image-url"
+                    name="image_url"
+                    type="text"
+                    maxlength="500"
+                    value="{{ place.image_url}}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="latitude">Latitude</label>
+
+                <input
+                    id="latitude"
+                    name="latitude"
+                    type="number"
+                    step="any"
+                    value="{{ place.latitude }}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="longitude">Longitude</label>
+
+                <input
+                    id="longitude"
+                    name="longitude"
+                    type="number"
+                    step="any"
+                    value="{{ place.longitude }}"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="admin-place-submit">
+                Save Changes
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="admin-place-actions">
-                        <a href="">Edit</a>
+                        <a href="{{ url_for('admin_edit_place', place_id=place.id) }}">Edit</a>
 
                         <button type="button">
                             Delete
