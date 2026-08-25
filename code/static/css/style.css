@@ -396,6 +396,74 @@ main{
     transition: 0.3s ease;
 }
 
+/* WHY CHOOSE NEXTSTOP */
+.why-nextstop{
+    padding: 32px 80px 64px;
+    background-color: #F8FAFC;
+}
+
+.why-nextstop h2{
+    margin: 0 0 40px;
+    text-align: center;
+    color: #1B1938;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.why-nextstop-list{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-nextstop-item{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.why-nextstop-item:first-child{
+    padding-left: 0;
+}
+
+.why-nextstop-item:last-child{
+    padding-right: 0;
+}
+
+.why-nextstop-item:not(:last-child){
+    border-right: 1px solid #D5E1DE;
+}
+
+.why-nextstop-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #D5E1DE;
+    color: #3A4B3C;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.why-nextstop-item h3{
+    margin: 0 0 6px;
+    color: #1B1938;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.why-nextstop-item p{
+    margin: 0;
+    color: #1B1938;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 /* PLACE DETAILS */
 .place-details{
     padding: 48px 80px;
@@ -1872,6 +1940,40 @@ main{
         gap: 16px;
     }
 
+/* WHY CHOOSE NEXTSTOP */
+    .why-nextstop{
+        padding: 40px 24px 48px;
+    }
+
+    .why-nextstop h2{
+        margin-bottom: 32px;
+        font-size: 24px;
+    }
+
+    .why-nextstop-list{
+        flex-direction: column;
+        max-width: 600px;
+        gap: 0;
+    }
+
+    .why-nextstop-item{
+        width: 100%;
+        padding: 24px 0;
+    }
+
+    .why-nextstop-item:first-child{
+        padding-top: 0;
+    }
+
+    .why-nextstop-item:last-child{
+        padding-bottom: 0;
+    }
+
+    .why-nextstop-item:not(:last-child){
+        border-right: none;
+        border-bottom: 1px solid #D5E1DE;
+    }
+
 /* ADD PLACE */
 .add-place-page{
     padding: 32px 24px;
@@ -2065,6 +2167,35 @@ main{
 /* FEATURED PLACES */
     .featured-list{
         grid-template-columns: 1fr;
+    }
+
+/* WHY CHOOSE NEXTSTOP */
+    .why-nextstop{
+        padding: 32px 16px 40px;
+    }
+
+    .why-nextstop h2{
+        margin-bottom: 28px;
+        font-size: 22px;
+    }
+
+    .why-nextstop-item{
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .why-nextstop-icon{
+        width: 54px;
+        height: 54px;
+        font-size: 23px;
+    }
+
+    .why-nextstop-item h3{
+        font-size: 15px;
+    }
+
+    .why-nextstop-item p{
+        font-size: 13px;
     }
 
 /* ADD PLACE */
