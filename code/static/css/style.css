@@ -1054,6 +1054,10 @@ body{
 
 .itinerary-details-header{
     margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
 }
 
 .itinerary-details-header h1{
@@ -1168,6 +1172,35 @@ body{
     border-left: 3px solid #9AB7AE;
     border-radius: 3px;
     background-color: #E6F2EE;
+}
+
+.itinerary-details-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.itinerary-details-actions form{
+    margin: 0;
+}
+
+.edit-itinerary-button{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #39588E;
+    border-radius: 6px;
+    color: #39588E;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.edit-itinerary-button:hover{
+    background-color: #39588E;
+    color: #F8FAFC;
 }
 
 /* EDIT ITINERARY */
@@ -2088,6 +2121,12 @@ body{
         padding: 24px 16px;
     }
 
+    .itinerary-details-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
     .itinerary-details-header h1{
         font-size: 30px;
     }
@@ -2131,6 +2170,10 @@ body{
 
     .itinerary-details-empty p{
         font-size: 13px;
+    }
+
+    .itinerary-details-actions{
+        width: 100%;
     }
 
 /* EDIT ITINERARY */
