@@ -477,5 +477,33 @@ def admin_places():
         places=all_places
     )
 
+@app.route("/admin/places/new", methods=["GET", "POST"])
+@login_required
+def admin_add_place():
+    if not current_user.is_admin:
+        return "Access denied", 403
+    
+    if request.method == "POST":
+        place = Place(
+            name=request.form["name"],
+            category=request.form["category"],
+            neighbourhood=request.form["neighbourhood"],
+            address=request.form["address"],
+            description=request.form["description"],
+            opening_hours=request.form["opening_hours"],
+            image_url=request.form["image_url"],
+            latitude=float(request.form["latitude"]),
+            longitude=float(request.form["longitude"])
+        )
+
+        db.session.add(place)
+        db.session.commit()
+
+        return redirect(url_for("admin_places"))
+    
+    return render_template(
+        "admin_add_place.html"
+    )
+
 if __name__ == "__main__":
     app.run(debug=True)
