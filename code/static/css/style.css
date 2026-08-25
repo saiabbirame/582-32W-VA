@@ -1056,6 +1056,7 @@ main{
     border: 1px solid #9AB7AE;
     border-radius: 12px;
     background-color: rgba(248, 250, 252, 0.9);
+    box-sizing: border-box;
 }
 
 .create-itinerary-container h1{
@@ -1093,6 +1094,16 @@ main{
 
 .create-itinerary-submit:hover{
     background-color: #1B1938;
+}
+
+.create-itinerary-wrapper{
+    width: 100%;
+    max-width: 520px;
+}
+
+.create-itinerary-wrapper .back-link{
+    display: inline-flex;
+    margin-bottom: 20px;
 }
 
 /* ITINERARY DETAILS */
