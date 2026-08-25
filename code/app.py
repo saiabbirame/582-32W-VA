@@ -533,5 +533,25 @@ def admin_edit_place(place_id):
         place=place
     )
 
+@app.route("/admin/places/<int:place_id>/delete", methods=["POST"])
+@login_required
+def admin_delete_place(place_id):
+    if not current_user.is_admin:
+        return "Access denied", 403
+    
+    place = Place.query.get_or_404(place_id)
+
+    if place.itinerary_places:
+        flash("This place cannot be deleted because it is used in an itinerary.", "error")
+
+        return redirect(url_for("admin_places"))
+    
+    db.session.delete(place)
+    db.session.commit()
+
+    flash("Place deleted successfully.", "success")
+
+    return redirect(url_for("admin_places"))
+
 if __name__ == "__main__":
     app.run(debug=True)
