@@ -137,6 +137,23 @@ body{
     transition: 0.3s ease;
 }
 
+.nav-links .admin-nav-link{
+    display: inline-flex;
+    align-items: center;
+    background-color: #D5E1DE;
+    color: #1B1938;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links .admin-nav-link:hover{
+    background-color: #9AB7AE;
+    color: #1B1938;
+}
+
 /* HOMEPAGE */
 /* HERO */
 .hero{

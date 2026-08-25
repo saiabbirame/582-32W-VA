@@ -30,6 +30,13 @@
 
                     {% if current_user.is_authenticated %}
                         <a class="{{ 'active' if request.endpoint in ['itineraries', 'create_itinerary', 'itinerary_details', 'add_place_form', 'edit_itinerary'] }}" href="{{ url_for('itineraries') }}">Itineraries</a>
+
+                        {% if current_user.is_admin %}
+                            <a class="admin-nav-link {{ 'active' if request.endpoint in ['admin_places', 'admin_add_places', 'admin_edit_place'] }}" href="{{ url_for('admin_places') }}">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Admin
+                            </a>
+                        {% endif %}
                     {% endif %}
                 </div>
 
