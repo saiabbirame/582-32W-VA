@@ -25,14 +25,21 @@
 
                         <p>{{ place.category }}</p>
 
-                        <p>{{ place.neighbourhood }}</p>
+                        <p class="admin-place-neighbourhood">
+                            <i class="fa-solid fa-location-dot"></i>
+                            {{ place.neighbourhood }}
+                        </p>
                     </div>
 
                     <div class="admin-place-actions">
-                        <a href="{{ url_for('admin_edit_place', place_id=place.id) }}">Edit</a>
+                        <a href="{{ url_for('admin_edit_place', place_id=place.id) }}">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit
+                        </a>
 
                         <form method="post" action="{{ url_for('admin_delete_place', place_id=place.id) }}">
                             <button type="submit">
+                                <i class="fa-solid fa-trash"></i>
                                 Delete
                             </button>
                         </form>

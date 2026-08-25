@@ -1415,6 +1415,131 @@ body{
     background-color: #1B1938;
 }
 
+/* ADMIN MANAGE PLACES */
+.admin-places-page{
+    padding: 48px 80px;
+}
+
+.admin-places-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    gap: 24px;
+    background-color: #D5E1DE;
+    border-radius: 12px;
+}
+
+.admin-places-header h1{
+    margin: 0 0 8px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1B1938;
+}
+
+.admin-places-header p{
+    margin: 0;
+    color: #3A4B3C;
+    font-size: 14px;
+}
+
+.admin-places-header .primary-button{
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.admin-places-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.admin-place-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 24px;
+    border: 1px solid #D5E1DE;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+}
+
+.admin-place-card h2{
+    margin: 0 0 6px;
+    color: #1B1938;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.admin-place-card p{
+    margin: 0 0 4px;
+    color: #3A4B3C;
+    font-size: 13px;
+}
+
+.admin-place-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-place-actions a{
+    padding: 8px 14px;
+    color: #39588E;
+    border: 1px solid #39588E;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.admin-place-actions a:hover{
+    background-color: #39588E;
+    color: #F8FAFC;
+}
+
+.admin-place-actions form{
+    margin: 0;
+}
+
+.admin-place-actions button{
+    padding: 8px 14px;
+    color: #F8FAFC;
+    border: 1px solid #901C14;
+    border-radius: 6px;
+    background-color: #901C14;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.admin-place-actions button:hover{
+    background-color: #F8FAFC;
+    color: #901C14;
+}
+
+.admin-place-actions a,
+.add-place-actions button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.admin-place-neighbourhood{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
@@ -1677,6 +1802,19 @@ body{
 
     .admin-place-form-description{
         font-size: 13px;
+    }
+
+/* ADMIN MANAGE PLACES */
+    .admin-places-page{
+        padding: 32px 24px;
+    }
+
+    .admin-places-header{
+        padding: 24px;
+    }
+
+    .admin-places-header h1{
+        font-size: 32px;
     }
 }
 
@@ -2052,5 +2190,48 @@ body{
     .admin-place-submit{
         width: 100%;
         font-size: 14px;
+    }
+
+/* ADMIN MANAGE PLACES */
+    .admin-places-page{
+        padding: 24px 16px;
+    }
+
+    .admin-places-header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .admin-places-header h1{
+        font-size: 28px;
+    }
+
+    .admin-places-header .primary-button{
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .admin-place-card{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .admin-place-actions{
+        width: 100%;
+    }
+
+    .admin-place-actions a,
+    .admin-place-actions form{
+        flex: 1;
+    }
+
+    .admin-place-actions a,
+    .admin-place-actions button{
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
