@@ -32,7 +32,7 @@
                         <a class="{{ 'active' if request.endpoint in ['itineraries', 'create_itinerary', 'itinerary_details', 'add_place_form', 'edit_itinerary'] }}" href="{{ url_for('itineraries') }}">Itineraries</a>
 
                         {% if current_user.is_admin %}
-                            <a class="admin-nav-link {{ 'active' if request.endpoint in ['admin_places', 'admin_add_places', 'admin_edit_place'] }}" href="{{ url_for('admin_places') }}">
+                            <a class="admin-nav-link {{ 'active' if request.endpoint in ['admin_places', 'admin_add_place', 'admin_edit_place'] }}" href="{{ url_for('admin_places') }}">
                                 <i class="fa-solid fa-shield-halved"></i>
                                 Admin
                             </a>
@@ -67,6 +67,50 @@
 
         {% block content %}{% endblock %}
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a class="footer-logo" href="{{ url_for('index') }}">
+                    <i class="fa-solid fa-map-pin"></i>
+                    Next<span>Stop</span>
+                </a>
+
+                <p>Discover Montreal and plan your next stop.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-link-group">
+                    <h3>Explore</h3>
+
+                    <a href="{{ url_for('index') }}">Home</a>
+                    <a href="{{ url_for('places') }}">Places</a>
+                </div>
+
+                {% if current_user.is_authenticated %}
+                    <div class="footer-link-group">
+                        <h3>Plan</h3>
+
+                        <a href="{{ url_for('itineraries') }}">My Itineraries</a>
+                        <a href="{{ url_for('create_itinerary') }}">Create Itinerary</a>
+                    </div>
+                {% endif %}
+
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                    <div class="footer-link-group">
+                        <h3>Admin</h3>
+
+                        <a href="{{ url_for('admin_places') }}">Manage Places</a>
+                        <a href="{{ url_for('admin_add_place') }}">Add Place</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 NextStop. All rights reserved.</p>
+        </div>
+    </footer>
     <script 
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 

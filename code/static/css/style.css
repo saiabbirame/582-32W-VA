@@ -19,7 +19,8 @@ body{
     align-items: center;
 }
 
-.nav-logo{
+.nav-logo,
+.footer-logo{
     display: flex;
     align-items: center;
     color: #F8FAFC;
@@ -28,12 +29,14 @@ body{
     text-decoration: none;
 }
 
-.nav-logo i{
+.nav-logo i,
+.footer-logo i{
     color: #9AB7AE;
     font-size: 22px;
 }
 
-.nav-logo span{
+.nav-logo span,
+.footer-logo span{
     color: #9AB7AE;
 }
 
@@ -1618,6 +1621,74 @@ body{
     color: #751710;
 }
 
+/* FOOTER */
+.site-footer{
+    background-color: #1B1938;
+    color: #F8FAFC;
+    margin-top: 64px;
+    padding: 40px 80px 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+    padding-bottom: 32px;
+}
+
+.footer-brand{
+    max-width: 300px;
+}
+
+.footer-brand p{
+    margin: 10px 0 0;
+    color: #F8FAFC;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-links{
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+}
+
+.footer-link-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-link-group h3{
+    margin: 0 0 4px;
+    color: #9AB7AE;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-link-group a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #F8FAFC;
+    transition: 0.3s ease;
+}
+
+.footer-link-group a:hover{
+    color: #9AB7AE;
+}
+
+.footer-bottom{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    margin: 0;
+    color: #9AB7AE;
+    font-size: 12px;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
 /* HOMEPAGE */
@@ -1904,6 +1975,23 @@ body{
     .flash{
         padding: 12px 16px;
         font-size: 13px;
+    }
+
+/* FOOTER */
+    .site-footer{
+        padding: 32px 24px 20px;
+    }
+
+    .footer-content{
+        gap: 32px;
+    }
+
+    .footer-links{
+        gap: 32px;
+    }
+
+    .footer-brand{
+        max-width: 260px;
     }
 }
 
@@ -2343,6 +2431,40 @@ body{
     .flash{
         padding: 12px 14px;
         font-size: 12px;
+    }
+
+/* FOOTER */
+    .site-footer{
+        margin-top: 48px;
+        padding: 32px 16px 20px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        gap: 32px;
+        padding-bottom: 24px;
+    }
+
+    .footer-brand{
+        max-width: 100%;
+    }
+
+    .footer-links{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 32px 48px;
+    }
+
+    .footer-link-group{
+        min-width: 120px;
+    }
+
+    .footer-bottom{
+        padding-top: 16px;
+    }
+
+    .footer-bottom p{
+        font-size: 11px;
     }
 
 }
