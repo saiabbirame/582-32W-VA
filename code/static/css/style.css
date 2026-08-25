@@ -406,7 +406,7 @@ main{
     margin: 0 0 40px;
     text-align: center;
     color: #1B1938;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -462,6 +462,54 @@ main{
     color: #1B1938;
     font-size: 14px;
     line-height: 1.6;
+}
+
+/* HOME CTA */
+.home-cta{
+    padding: 0 80px 64px;
+    background-color: #F8FAFC;
+}
+
+.home-cta-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D5E1DE;
+    border-radius: 12px;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 28px 40px;
+    max-width: 1200px;
+}
+
+.home-cta-text h2{
+    margin: 0 0 6px;
+    color: #1B1938;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.home-cta-text p{
+    margin: 0;
+    color: #1B1938;
+    font-size: 14px;
+}
+
+.home-cta-button{
+    background-color: #3A4B3C;
+    color: #F8FAFC;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.home-cta-button:hover{
+    background-color: #F8FAFC;
+    color: #3A4B3C;
 }
 
 /* PLACE DETAILS */
@@ -1974,26 +2022,39 @@ main{
         border-bottom: 1px solid #D5E1DE;
     }
 
+/* HOME CTA */
+    .home-cta{
+        padding: 0 24px 48px;
+    }
+
+    .home-cta-content{
+        padding: 28px 32px;
+    }
+
+    .home-cta-text h2{
+        font-size: 22px;
+    }
+
 /* ADD PLACE */
-.add-place-page{
-    padding: 32px 24px;
-}
+    .add-place-page{
+        padding: 32px 24px;
+    }
 
-.add-place-wrapper{
-    max-width: 560px;
-}
+    .add-place-wrapper{
+        max-width: 560px;
+    }
 
-.add-place-container{
-    padding: 32px;
-}
+    .add-place-container{
+        padding: 32px;
+    }
 
-.add-place-container h1{
-    font-size: 28px;
-}
+    .add-place-container h1{
+        font-size: 28px;
+    }
 
-.add-place-description{
-    font-size: 14px;
-}
+    .add-place-description{
+        font-size: 14px;
+    }
 
 /* BROWSE PLACES */
     .places-page{
@@ -2196,6 +2257,33 @@ main{
 
     .why-nextstop-item p{
         font-size: 13px;
+    }
+
+/* HOME CTA */
+    .home-cta{
+        padding: 0 16px 40px;
+    }
+
+    .home-cta-content{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .home-cta-text h2{
+        font-size: 20px;
+    }
+
+    .home-cta-text p{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .home-cta-button{
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
     }
 
 /* ADD PLACE */

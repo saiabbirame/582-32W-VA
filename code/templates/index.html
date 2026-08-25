@@ -122,4 +122,17 @@
         </div>
     </div>
 </section>
+
+{% if not current_user.is_authenticated %}
+    <section class="home-cta">
+        <div class="home-cta-content">
+            <div class="home-cta-text">
+                <h2>Ready to explore Montreal?</h2>
+                <p>Create your free account and start planning your next adventure.</p>
+            </div>
+
+            <a href="{{ url_for('register') }}" class="home-cta-button">Sign Up Free</a>
+        </div>
+    </section>
+{% endif %}
 {% endblock %}
