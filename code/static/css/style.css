@@ -640,6 +640,11 @@ main{
     align-items: center;
     gap: 8px;
     margin-bottom: 40px;
+    color: #5C6B5C;
+    font-size: 14px;
+}
+
+.place-address i{
     color: #3A4B3C;
     font-size: 15px;
 }
@@ -652,7 +657,7 @@ main{
     margin: 0 0 28px;
     color: #3A4B3C;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .place-details-info .primary-button{
