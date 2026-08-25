@@ -1662,6 +1662,22 @@ body{
         font-size: 20px;
     }
 
+/* ADMIN ADD PLACE */
+    .admin-place-form-page{
+        padding: 32px 24px;
+    }
+
+    .admin-place-form-container{
+        padding: 28px;
+    }
+
+    .admin-place-form-container h1{
+        font-size: 28px;
+    }
+
+    .admin-place-form-description{
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 576px){
@@ -2010,4 +2026,31 @@ body{
         width: 100%;
     }
 
+/* ADMIN ADD PLACE */
+    .admin-place-form-page{
+        padding: 24px 16px;
+    }
+
+    .admin-place-form-container{
+        padding: 20px;
+    }
+
+    .admin-place-form-container h1{
+        font-size: 26px;
+    }
+
+
+    .admin-place-form-description{
+        font-size: 13px;
+    }
+
+    .admin-place-form-container select,
+    .admin-place-form-container textarea{
+        font-size: 13px;
+    }
+
+    .admin-place-submit{
+        width: 100%;
+        font-size: 14px;
+    }
 }
