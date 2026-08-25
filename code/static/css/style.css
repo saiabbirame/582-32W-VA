@@ -42,6 +42,14 @@ main{
     font-size: 22px;
 }
 
+.nav-logo i{
+    transition: 0.3s ease;
+}
+
+.nav-logo:hover i{
+    transform: translateY(-3px);
+}
+
 .nav-logo span,
 .footer-logo span{
     color: #9AB7AE;
@@ -176,6 +184,7 @@ main{
 
 .hero-text{
     width: 50%;
+    animation: heroTextEntrance 0.8s ease-out;
 }
 
 .hero-text h1{
@@ -239,12 +248,38 @@ main{
     width: 50%;
     display: flex;
     justify-content: center;
+    animation: heroImageEntrance 0.8s ease-out;
 }
 
 .hero-image img{
     width: 120%;
     height: auto;
     display: block;
+}
+
+/* HERO ANIMATIONS */
+@keyframes heroTextEntrance{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroImageEntrance{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* CATEGORIES */
@@ -283,6 +318,7 @@ main{
 .category-card:hover{
     background-color: #9AB7AE;
     color: #F8FAFC;
+    transform: translateY(-5px);
 }
 
 .category-card i{
@@ -325,6 +361,11 @@ main{
     border: 1px solid #9AB7AE;
     border-radius: 8px;
     background-color: #F8FAFC;
+    transition: 0.3s ease;
+}
+
+.place-card:hover{
+    transform: translateY(-5px);
 }
 
 .place-card img{
@@ -332,6 +373,11 @@ main{
     height: 190px;
     object-fit: cover;
     display: block;
+    transition: 0.3s ease;
+}
+
+.place-card:hover img{
+    transform: scale(1.05);
 }
 
 .place-card-content{
@@ -448,6 +494,11 @@ main{
     color: #3A4B3C;
     font-size: 27px;
     flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.why-nextstop-item:hover .why-nextstop-icon{
+    transform: scale(1.1);
 }
 
 .why-nextstop-item h3{
@@ -526,6 +577,11 @@ main{
     font-weight: 500;
     text-decoration: none;
     margin-bottom: 32px;
+    transition: 0.3s ease;
+}
+
+.back-link:hover{
+    transform: translateX(-5px);
 }
 
 .place-details-main{
@@ -1115,7 +1171,7 @@ main{
 }
 
 .itinerary-card:hover{
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 .itinerary-card-content h2{
@@ -1675,6 +1731,11 @@ main{
     border: 1px solid #D5E1DE;
     border-radius: 8px;
     background-color: #F8FAFC;
+    transition: 0.3s ease;
+}
+
+.admin-place-card:hover{
+    transform: translateY(-5px);
 }
 
 .admin-place-card h2{
