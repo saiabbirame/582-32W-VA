@@ -83,16 +83,16 @@
                 <div class="footer-link-group">
                     <h3>Explore</h3>
 
-                    <a href="{{ url_for('index') }}">Home</a>
-                    <a href="{{ url_for('places') }}">Places</a>
+                    <a class="{{ 'active' if request.endpoint == 'index' }}" href="{{ url_for('index') }}">Home</a>
+                    <a class="{{ 'active' if request.endpoint in ['places', 'place_details'] }}" href="{{ url_for('places') }}">Places</a>
                 </div>
 
                 {% if current_user.is_authenticated %}
                     <div class="footer-link-group">
                         <h3>Plan</h3>
 
-                        <a href="{{ url_for('itineraries') }}">My Itineraries</a>
-                        <a href="{{ url_for('create_itinerary') }}">Create Itinerary</a>
+                        <a class="{{ 'active' if request.endpoint in ['itineraries', 'itinerary_details', 'edit_itinerary', 'add_place_form'] }}"  href="{{ url_for('itineraries') }}">My Itineraries</a>
+                        <a class="{{ 'active' if request.endpoint == 'create_itinerary' }}"  href="{{ url_for('create_itinerary') }}">Create Itinerary</a>
                     </div>
                 {% endif %}
 
@@ -100,8 +100,8 @@
                     <div class="footer-link-group">
                         <h3>Admin</h3>
 
-                        <a href="{{ url_for('admin_places') }}">Manage Places</a>
-                        <a href="{{ url_for('admin_add_place') }}">Add Place</a>
+                        <a class="{{ 'active' if request.endpoint in ['admin_places', 'admin_edit_place'] }}"  href="{{ url_for('admin_places') }}">Manage Places</a>
+                        <a class="{{ 'active' if request.endpoint == 'admin_add_place' }}" href="{{ url_for('admin_add_place') }}">Add Place</a>
                     </div>
                 {% endif %}
             </div>
