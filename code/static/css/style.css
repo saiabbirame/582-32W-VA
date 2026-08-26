@@ -1395,7 +1395,7 @@ main{
     align-items: center;
     gap: 6px;
     margin: 0;
-    color: #5F6F65;
+    color: #3A4B3C;
     font-size: 13px;
 }
 
@@ -1734,7 +1734,7 @@ main{
     gap: 24px;
     padding: 20px 24px;
     border: 1px solid #D5E1DE;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #F8FAFC;
     transition: 0.3s ease;
 }
@@ -1801,7 +1801,7 @@ main{
 }
 
 .admin-place-actions a,
-.add-place-actions button{
+.admin-place-actions button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1812,6 +1812,40 @@ main{
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+.admin-place-neighbourhood i{
+    position: relative;
+    top: -1px;
+}
+
+.admin-place-main{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.admin-place-image{
+    width: 90px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.admin-place-info h2{
+    margin: 0 0 8px;
+}
+
+.admin-place-category{
+    display: inline-block;
+    background-color: #D5E1DE;
+    color: #3A4B3C;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 /* FLASH MESSAGES */

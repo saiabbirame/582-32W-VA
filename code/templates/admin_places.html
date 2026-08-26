@@ -20,15 +20,21 @@
         <div class="admin-places-list">
             {% for place in places %}
                 <article class="admin-place-card">
-                    <div>
-                        <h2>{{ place.name }}</h2>
+                    <div class="admin-place-main">
+                        <img src="{{ place.image_url }}" alt="{{ place.name }}" class="admin-place-image">
+                        
+                        <div class="admin-place-info">
+                            <h2>{{ place.name }}</h2>
 
-                        <p>{{ place.category }}</p>
+                            <span class="admin-place-category">
+                                {{ place.category }}
+                            </span>
 
-                        <p class="admin-place-neighbourhood">
-                            <i class="fa-solid fa-location-dot"></i>
-                            {{ place.neighbourhood }}
-                        </p>
+                            <p class="admin-place-neighbourhood">
+                                <i class="fa-solid fa-location-dot"></i>
+                                {{ place.neighbourhood }}
+                            </p>
+                        </div>
                     </div>
 
                     <div class="admin-place-actions">
