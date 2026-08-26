@@ -1869,7 +1869,6 @@ main{
 /* FLASH MESSAGES */
 .flash-messages{
     padding: 20px 80px 0;
-    margin-bottom: -40px;
 }
 
 .flash{
@@ -2296,7 +2295,6 @@ main{
 /* FLASH MESSAGES */
     .flash-messages{
         padding: 16px 24px 0;
-        margin-bottom: -28px;
     }
 
     .flash{
@@ -2808,7 +2806,6 @@ main{
 /* FLASH MESSAGES */
     .flash-messages{
         padding: 14px 16px 0;
-        margin-bottom: -20px;
     }
 
     .flash{
