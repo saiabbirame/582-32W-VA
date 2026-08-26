@@ -47,3 +47,33 @@ if (placeSearch && placeCards.length > 0) {
         });
     });
 }
+
+// ITINERARY MAP
+const itineraryMapElement = document.querySelector("#itinerary-map");
+
+if (itineraryMapElement) {
+    const placeElements = document.querySelectorAll(".itinerary-map-place");
+    const markers = [];
+
+    placeElements.forEach((placeElement) => {
+        const name = placeElement.dataset.name;
+        const latitude = Number(placeElement.dataset.latitude);
+        const longitude = Number(placeElement.dataset.longitude);
+        const time = placeElement.dataset.time;
+
+        const marker = L.marker([latitude, longitude]).bindPopup(`<strong>${name}</strong><br>${time}`);
+        
+        markers.push(marker);
+    });
+
+    const itineraryPlaces = L.layerGroup(markers);
+
+    const map = L.map("itinerary-map").setView([45.5088, -73.5617], 12);
+
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    itineraryPlaces.addTo(map);
+}

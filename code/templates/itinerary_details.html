@@ -68,6 +68,24 @@
                     </article>
                 {% endfor %}
             </div>
+
+            <div class="itinerary-map-section">
+                <h2>Itinerary Map</h2>
+
+                <div id="itinerary-map"></div>
+
+                <div class="itinerary-map-data">
+                    {% for itinerary_place in itinerary.itinerary_places %}
+                        <span 
+                            class="itinerary-map-place"
+                            data-name="{{ itinerary_place.place.name }}"
+                            data-latitude="{{ itinerary_place.place.latitude }}"
+                            data-longitude="{{ itinerary_place.place.longitude }}"
+                            data-time="{{ itinerary_place.visit_time.strftime('%I:%M %p') }}"
+                        ></span>
+                    {% endfor %}
+                </div>
+            </div>
         {% else %}
             <div class="itinerary-details-empty">
                 <p>No places have been added to this itinerary yet.</p>
