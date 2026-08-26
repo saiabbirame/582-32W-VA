@@ -810,7 +810,7 @@ main{
     max-width: 600px;
 }
 
-.add-place-wrapper .back-link{
+.add-place-container .back-link{
     display: inline-flex;
     margin-bottom: 20px;
 }
