@@ -1,4 +1,4 @@
-# Week 4 Journal
+# Week 5 Journal
 
 ## Monday
 I continued working on the main functionality and overall polish of NextStop. I completed the edit and delete functionality for itineraries and made sure users can remove individual places from an itinerary. I also improved the Edit Itinerary page styling and made it responsive. I fixed the navigation activate state so the Itineraries link stays active while editing an itinerary and I styled the logout button to match the rest of the navigation. I also made the category filters on the Places page functional and added a live search feature using JavaScript so users can search for places by name. I then started and completed the main admin place management functionality. I added an `is_admin` field to the User model and updated the existing database while keeping the current data. I created an admin-only Manage Places page and implemented the ability for an administrator to add, edit and delete places. I also styled the admin pages and made them responsive. Finally, I added Edit and Delete actions directly to the Itinerary Details page so users no longer need to manually enter the edit route.
@@ -6,3 +6,17 @@ I continued working on the main functionality and overall polish of NextStop. I 
 Next, I will continue polishing the application for the final submission. I want to make the admin interface more visually distinguishable when an administrator is logged in, add a footer to the application and review the navigation to make sure every important page can be reached naturally without manually entering routes. I also want to add subtle animations and transitions to make the interface feel more interactive. After that, I will focus on validation, error handling, testing and final documentation.
 
 There are no major blockers. The main functionality of the application is working so my focus is now connecting any remaining pages, improving the user experience and completing the final testing and polishing.
+
+## Tuesday
+I continued with the final polishing and testing of NextStop. I improved different parts of the interface including the admin Manage Places cards, the category section, the homepage and some of the page spacing. I added a Why Choose NextStop section and a signup section to the homepage and added subtle animations to make the interface feel more interactive. I also fixed some responsive issues, including the flash message spacing. One of the main features I completed was the itinerary map. I used Leaflet to display all of the places from an itinerary as markers on the same map with popups showing the place name and visit time. I had to go through the Leaflet documentation and figure out how to adapt the examples to the data from my own project. I also finished the README and added the project dependencies to requirements.txt.
+
+Next, I will do a final review of the application and prepare for the project presentation. I want to make sure the main workflows for guests, registered users and administrators are working correctly before demonstrating them. I also want to prepare which features to focus on during the live demonstration.
+
+There are no major blockers. The main functionality is complete, so my focus is now on final testing, small visual fixes and making sure the project is ready to present.
+
+## Wednesday
+Today was the presentation day for Web Project 1. Before the presentation, I made a few final changes to NextStop. I moved the back navigation links inside the Create Itinerary and Add to Itinerary form cards to improve their placement and added images for the new places that I had added to the database. I also did a final test of the main user flows and prepare the application for the live demonstration.
+
+During the presentation, I demonstrated the application by showing how a guest can browse, search and filter places, view place details and use the interactive maps. I also demonstrated the registered user workflow by logging in, adding Royalmount to an itinerary with a visit time and note, and showing how the information appears in the itinerary and on the itinerary map. Finally, I demonstrated the admin side and explained how places can be managed through the admin interface.
+
+The main development work for Web Project 1 is now complete. There are no major blockers remaining. If I continue working on NextStop, I can focus on improvements based on the presentation feedback and possible future features.
